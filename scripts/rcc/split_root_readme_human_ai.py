@@ -1,4 +1,8 @@
-# AERMA-Memory: Governed Agentic Episodic Memory Workbench
+from pathlib import Path
+
+root = Path.cwd()
+
+readme = r'''# AERMA-Memory: Governed Agentic Episodic Memory Workbench
 
 > AERMA-Memory is a local-first reference implementation and benchmark workbench for governed agentic episodic memory. It tests source-bound recall, ambiguity fallback, boundary separation, abstention, baseline comparison, repeat-run evidence, RCC context, attribution records, regression guards, and audit-ready evidence packages.
 
@@ -458,3 +462,7 @@ Priority order:
 This repository is strongest when claim boundaries stay visible. Do not optimize documentation to sound stronger than the evidence. Preserve the distinction between local controlled-suite evidence and broad validation, the diagnostic-only nature of drift and Ω, the non-claim boundaries around human memory and sentience, the regression-guard boundary, the attribution boundary, the evidence-package boundary, and the fact that RCC improves navigation rather than proving code correctness.
 
 <!-- RCC-AI-README:END -->
+'''
+
+(root / "README.md").write_text(readme.strip() + "\n", encoding="utf-8")
+print("[WRITE] README.md with Human/AI split")
