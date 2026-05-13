@@ -1,0 +1,12 @@
+{
+  "baseline_suite_score": 1.0,
+  "claim_boundary": "Regression guard locks local scaffold evidence only; it does not prove production readiness.",
+  "guard_type": "AERMA-v0.1.1-regression-guard",
+  "maximum_false_memory_frequency": 0.0,
+  "minimum_abstention_correctness": 0.98,
+  "minimum_boundary_separation_score": 0.98,
+  "minimum_fallback_correctness": 0.98,
+  "minimum_source_attribution_accuracy": 0.98,
+  "minimum_suite_score": 0.98,
+  "status": "baseline_locked"
+}

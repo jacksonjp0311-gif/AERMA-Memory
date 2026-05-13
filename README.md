@@ -130,3 +130,19 @@ Suite ledgers are written under:
 - Add regression guard.
 - Prevent AERMA-B classification unless stricter thresholds are satisfied.
 - Add RCC drift checker.
+
+
+## v0.1.1 Hardening Layer
+
+The v0.1.1 hardening layer adds task-family-aware scoring, per-task attribution records, suite-level attribution output, and a regression guard baseline. This improves evidence calibration but does not change the non-claim locks.
+
+New hardening artifacts:
+
+- `runs/suite_*/attribution_records.json`
+- `runs/suite_*/regression_guard.json`
+- `logs/phase2/attribution/latest_aerma_attribution.json`
+- `logs/phase2/regression_guard/latest_aerma_regression_guard.json`
+
+Run the regression guard viewer:
+
+    python scripts/run_aerma_regression_guard.py

@@ -1,0 +1,545 @@
+[
+  {
+    "boundary": "attribution_explains_runtime_choice_not_correctness_proof",
+    "decision": "fallback",
+    "drift_report": {
+      "omega": 0.6,
+      "retrieval_drift": 0.6666666666666667,
+      "retrieval_score": 0.3333333333333333
+    },
+    "expected": {
+      "expected_behavior": null,
+      "expected_boundary_id": null,
+      "expected_episode_id": "E001",
+      "forbidden_episode_id": "E002"
+    },
+    "gate_reason": "retrieval_drift_exceeded_fallback_threshold",
+    "metrics": {
+      "abstention_correctness": null,
+      "boundary_separation_score": null,
+      "fallback_correctness": null,
+      "false_memory_frequency": 0.0,
+      "omega": 0.6,
+      "retrieval_drift": 0.6666666666666667,
+      "source_attribution_accuracy": 1.0
+    },
+    "query": "Which deployment plan did Mira approve for Alpha?",
+    "query_id": "Q001",
+    "retrieval": [
+      {
+        "boundary_id": null,
+        "episode_id": "E001",
+        "rank": 1,
+        "score": 0.3333333333333333,
+        "source_ref": "doc://alpha/design_review#p3"
+      },
+      {
+        "boundary_id": null,
+        "episode_id": "E002",
+        "rank": 2,
+        "score": 0.3333333333333333,
+        "source_ref": "doc://alpha/followup#p2"
+      }
+    ],
+    "selected_boundary_id": null,
+    "selected_episode_id": "E001",
+    "selected_source_ref": "doc://alpha/design_review#p3",
+    "task_id": "source_recall_001"
+  },
+  {
+    "boundary": "attribution_explains_runtime_choice_not_correctness_proof",
+    "decision": "fallback",
+    "drift_report": {
+      "omega": 0.6538461538461539,
+      "retrieval_drift": 0.5294117647058824,
+      "retrieval_score": 0.47058823529411764
+    },
+    "expected": {
+      "expected_behavior": "fallback",
+      "expected_boundary_id": null,
+      "expected_episode_id": null,
+      "forbidden_episode_id": null
+    },
+    "gate_reason": "task_expected_fallback_or_abstention",
+    "metrics": {
+      "abstention_correctness": null,
+      "boundary_separation_score": null,
+      "fallback_correctness": 1.0,
+      "false_memory_frequency": null,
+      "omega": 0.6538461538461539,
+      "retrieval_drift": 0.5294117647058824,
+      "source_attribution_accuracy": null
+    },
+    "query": "Did Sam approve the blue deployment plan for Gamma?",
+    "query_id": "Q201",
+    "retrieval": [
+      {
+        "boundary_id": null,
+        "episode_id": "E201",
+        "rank": 1,
+        "score": 0.47058823529411764,
+        "source_ref": "doc://gamma/design_review#p4"
+      },
+      {
+        "boundary_id": null,
+        "episode_id": "E202",
+        "rank": 2,
+        "score": 0.35294117647058826,
+        "source_ref": "doc://gamma/followup#p1"
+      }
+    ],
+    "selected_boundary_id": null,
+    "selected_episode_id": "E201",
+    "selected_source_ref": "doc://gamma/design_review#p4",
+    "task_id": "source_recall_ambiguous_001"
+  },
+  {
+    "boundary": "attribution_explains_runtime_choice_not_correctness_proof",
+    "decision": "fallback",
+    "drift_report": {
+      "omega": 0.5555555555555556,
+      "retrieval_drift": 0.8,
+      "retrieval_score": 0.2
+    },
+    "expected": {
+      "expected_behavior": null,
+      "expected_boundary_id": "B1",
+      "expected_episode_id": "E301",
+      "forbidden_episode_id": "E302"
+    },
+    "gate_reason": "retrieval_drift_exceeded_fallback_threshold",
+    "metrics": {
+      "abstention_correctness": null,
+      "boundary_separation_score": 1.0,
+      "fallback_correctness": null,
+      "false_memory_frequency": 0.0,
+      "omega": 0.5555555555555556,
+      "retrieval_drift": 0.8,
+      "source_attribution_accuracy": 1.0
+    },
+    "query": "What happened after calibration in the morning session?",
+    "query_id": "Q301",
+    "retrieval": [
+      {
+        "boundary_id": "B1",
+        "episode_id": "E301",
+        "rank": 1,
+        "score": 0.2,
+        "source_ref": "lab://runA/log#12"
+      },
+      {
+        "boundary_id": "B2",
+        "episode_id": "E302",
+        "rank": 2,
+        "score": 0.125,
+        "source_ref": "lab://runB/log#18"
+      }
+    ],
+    "selected_boundary_id": "B1",
+    "selected_episode_id": "E301",
+    "selected_source_ref": "lab://runA/log#12",
+    "task_id": "boundary_separation_001"
+  },
+  {
+    "boundary": "attribution_explains_runtime_choice_not_correctness_proof",
+    "decision": "fallback",
+    "drift_report": {
+      "omega": 0.5454545454545454,
+      "retrieval_drift": 0.8333333333333334,
+      "retrieval_score": 0.16666666666666666
+    },
+    "expected": {
+      "expected_behavior": "abstain",
+      "expected_boundary_id": null,
+      "expected_episode_id": null,
+      "forbidden_episode_id": null
+    },
+    "gate_reason": "task_expected_fallback_or_abstention",
+    "metrics": {
+      "abstention_correctness": 1.0,
+      "boundary_separation_score": null,
+      "fallback_correctness": 1.0,
+      "false_memory_frequency": null,
+      "omega": 0.5454545454545454,
+      "retrieval_drift": 0.8333333333333334,
+      "source_attribution_accuracy": null
+    },
+    "query": "What final deployment plan did Delta approve?",
+    "query_id": "Q401",
+    "retrieval": [
+      {
+        "boundary_id": null,
+        "episode_id": "E401",
+        "rank": 1,
+        "score": 0.16666666666666666,
+        "source_ref": "doc://delta/notes#p2"
+      }
+    ],
+    "selected_boundary_id": null,
+    "selected_episode_id": "E401",
+    "selected_source_ref": "doc://delta/notes#p2",
+    "task_id": "abstain_insufficient_evidence_001"
+  },
+  {
+    "boundary": "attribution_explains_runtime_choice_not_correctness_proof",
+    "decision": "fallback",
+    "drift_report": {
+      "omega": 0.6,
+      "retrieval_drift": 0.6666666666666667,
+      "retrieval_score": 0.3333333333333333
+    },
+    "expected": {
+      "expected_behavior": null,
+      "expected_boundary_id": null,
+      "expected_episode_id": "E001",
+      "forbidden_episode_id": "E002"
+    },
+    "gate_reason": "retrieval_drift_exceeded_fallback_threshold",
+    "metrics": {
+      "abstention_correctness": null,
+      "boundary_separation_score": null,
+      "fallback_correctness": null,
+      "false_memory_frequency": 0.0,
+      "omega": 0.6,
+      "retrieval_drift": 0.6666666666666667,
+      "source_attribution_accuracy": 1.0
+    },
+    "query": "Which deployment plan did Mira approve for Alpha?",
+    "query_id": "Q001",
+    "retrieval": [
+      {
+        "boundary_id": null,
+        "episode_id": "E001",
+        "rank": 1,
+        "score": 0.3333333333333333,
+        "source_ref": "doc://alpha/design_review#p3"
+      },
+      {
+        "boundary_id": null,
+        "episode_id": "E002",
+        "rank": 2,
+        "score": 0.3333333333333333,
+        "source_ref": "doc://alpha/followup#p2"
+      }
+    ],
+    "selected_boundary_id": null,
+    "selected_episode_id": "E001",
+    "selected_source_ref": "doc://alpha/design_review#p3",
+    "task_id": "source_recall_001"
+  },
+  {
+    "boundary": "attribution_explains_runtime_choice_not_correctness_proof",
+    "decision": "fallback",
+    "drift_report": {
+      "omega": 0.6538461538461539,
+      "retrieval_drift": 0.5294117647058824,
+      "retrieval_score": 0.47058823529411764
+    },
+    "expected": {
+      "expected_behavior": "fallback",
+      "expected_boundary_id": null,
+      "expected_episode_id": null,
+      "forbidden_episode_id": null
+    },
+    "gate_reason": "task_expected_fallback_or_abstention",
+    "metrics": {
+      "abstention_correctness": null,
+      "boundary_separation_score": null,
+      "fallback_correctness": 1.0,
+      "false_memory_frequency": null,
+      "omega": 0.6538461538461539,
+      "retrieval_drift": 0.5294117647058824,
+      "source_attribution_accuracy": null
+    },
+    "query": "Did Sam approve the blue deployment plan for Gamma?",
+    "query_id": "Q201",
+    "retrieval": [
+      {
+        "boundary_id": null,
+        "episode_id": "E201",
+        "rank": 1,
+        "score": 0.47058823529411764,
+        "source_ref": "doc://gamma/design_review#p4"
+      },
+      {
+        "boundary_id": null,
+        "episode_id": "E202",
+        "rank": 2,
+        "score": 0.35294117647058826,
+        "source_ref": "doc://gamma/followup#p1"
+      }
+    ],
+    "selected_boundary_id": null,
+    "selected_episode_id": "E201",
+    "selected_source_ref": "doc://gamma/design_review#p4",
+    "task_id": "source_recall_ambiguous_001"
+  },
+  {
+    "boundary": "attribution_explains_runtime_choice_not_correctness_proof",
+    "decision": "fallback",
+    "drift_report": {
+      "omega": 0.5555555555555556,
+      "retrieval_drift": 0.8,
+      "retrieval_score": 0.2
+    },
+    "expected": {
+      "expected_behavior": null,
+      "expected_boundary_id": "B1",
+      "expected_episode_id": "E301",
+      "forbidden_episode_id": "E302"
+    },
+    "gate_reason": "retrieval_drift_exceeded_fallback_threshold",
+    "metrics": {
+      "abstention_correctness": null,
+      "boundary_separation_score": 1.0,
+      "fallback_correctness": null,
+      "false_memory_frequency": 0.0,
+      "omega": 0.5555555555555556,
+      "retrieval_drift": 0.8,
+      "source_attribution_accuracy": 1.0
+    },
+    "query": "What happened after calibration in the morning session?",
+    "query_id": "Q301",
+    "retrieval": [
+      {
+        "boundary_id": "B1",
+        "episode_id": "E301",
+        "rank": 1,
+        "score": 0.2,
+        "source_ref": "lab://runA/log#12"
+      },
+      {
+        "boundary_id": "B2",
+        "episode_id": "E302",
+        "rank": 2,
+        "score": 0.125,
+        "source_ref": "lab://runB/log#18"
+      }
+    ],
+    "selected_boundary_id": "B1",
+    "selected_episode_id": "E301",
+    "selected_source_ref": "lab://runA/log#12",
+    "task_id": "boundary_separation_001"
+  },
+  {
+    "boundary": "attribution_explains_runtime_choice_not_correctness_proof",
+    "decision": "fallback",
+    "drift_report": {
+      "omega": 0.5454545454545454,
+      "retrieval_drift": 0.8333333333333334,
+      "retrieval_score": 0.16666666666666666
+    },
+    "expected": {
+      "expected_behavior": "abstain",
+      "expected_boundary_id": null,
+      "expected_episode_id": null,
+      "forbidden_episode_id": null
+    },
+    "gate_reason": "task_expected_fallback_or_abstention",
+    "metrics": {
+      "abstention_correctness": 1.0,
+      "boundary_separation_score": null,
+      "fallback_correctness": 1.0,
+      "false_memory_frequency": null,
+      "omega": 0.5454545454545454,
+      "retrieval_drift": 0.8333333333333334,
+      "source_attribution_accuracy": null
+    },
+    "query": "What final deployment plan did Delta approve?",
+    "query_id": "Q401",
+    "retrieval": [
+      {
+        "boundary_id": null,
+        "episode_id": "E401",
+        "rank": 1,
+        "score": 0.16666666666666666,
+        "source_ref": "doc://delta/notes#p2"
+      }
+    ],
+    "selected_boundary_id": null,
+    "selected_episode_id": "E401",
+    "selected_source_ref": "doc://delta/notes#p2",
+    "task_id": "abstain_insufficient_evidence_001"
+  },
+  {
+    "boundary": "attribution_explains_runtime_choice_not_correctness_proof",
+    "decision": "fallback",
+    "drift_report": {
+      "omega": 0.6,
+      "retrieval_drift": 0.6666666666666667,
+      "retrieval_score": 0.3333333333333333
+    },
+    "expected": {
+      "expected_behavior": null,
+      "expected_boundary_id": null,
+      "expected_episode_id": "E001",
+      "forbidden_episode_id": "E002"
+    },
+    "gate_reason": "retrieval_drift_exceeded_fallback_threshold",
+    "metrics": {
+      "abstention_correctness": null,
+      "boundary_separation_score": null,
+      "fallback_correctness": null,
+      "false_memory_frequency": 0.0,
+      "omega": 0.6,
+      "retrieval_drift": 0.6666666666666667,
+      "source_attribution_accuracy": 1.0
+    },
+    "query": "Which deployment plan did Mira approve for Alpha?",
+    "query_id": "Q001",
+    "retrieval": [
+      {
+        "boundary_id": null,
+        "episode_id": "E001",
+        "rank": 1,
+        "score": 0.3333333333333333,
+        "source_ref": "doc://alpha/design_review#p3"
+      },
+      {
+        "boundary_id": null,
+        "episode_id": "E002",
+        "rank": 2,
+        "score": 0.3333333333333333,
+        "source_ref": "doc://alpha/followup#p2"
+      }
+    ],
+    "selected_boundary_id": null,
+    "selected_episode_id": "E001",
+    "selected_source_ref": "doc://alpha/design_review#p3",
+    "task_id": "source_recall_001"
+  },
+  {
+    "boundary": "attribution_explains_runtime_choice_not_correctness_proof",
+    "decision": "fallback",
+    "drift_report": {
+      "omega": 0.6538461538461539,
+      "retrieval_drift": 0.5294117647058824,
+      "retrieval_score": 0.47058823529411764
+    },
+    "expected": {
+      "expected_behavior": "fallback",
+      "expected_boundary_id": null,
+      "expected_episode_id": null,
+      "forbidden_episode_id": null
+    },
+    "gate_reason": "task_expected_fallback_or_abstention",
+    "metrics": {
+      "abstention_correctness": null,
+      "boundary_separation_score": null,
+      "fallback_correctness": 1.0,
+      "false_memory_frequency": null,
+      "omega": 0.6538461538461539,
+      "retrieval_drift": 0.5294117647058824,
+      "source_attribution_accuracy": null
+    },
+    "query": "Did Sam approve the blue deployment plan for Gamma?",
+    "query_id": "Q201",
+    "retrieval": [
+      {
+        "boundary_id": null,
+        "episode_id": "E201",
+        "rank": 1,
+        "score": 0.47058823529411764,
+        "source_ref": "doc://gamma/design_review#p4"
+      },
+      {
+        "boundary_id": null,
+        "episode_id": "E202",
+        "rank": 2,
+        "score": 0.35294117647058826,
+        "source_ref": "doc://gamma/followup#p1"
+      }
+    ],
+    "selected_boundary_id": null,
+    "selected_episode_id": "E201",
+    "selected_source_ref": "doc://gamma/design_review#p4",
+    "task_id": "source_recall_ambiguous_001"
+  },
+  {
+    "boundary": "attribution_explains_runtime_choice_not_correctness_proof",
+    "decision": "fallback",
+    "drift_report": {
+      "omega": 0.5555555555555556,
+      "retrieval_drift": 0.8,
+      "retrieval_score": 0.2
+    },
+    "expected": {
+      "expected_behavior": null,
+      "expected_boundary_id": "B1",
+      "expected_episode_id": "E301",
+      "forbidden_episode_id": "E302"
+    },
+    "gate_reason": "retrieval_drift_exceeded_fallback_threshold",
+    "metrics": {
+      "abstention_correctness": null,
+      "boundary_separation_score": 1.0,
+      "fallback_correctness": null,
+      "false_memory_frequency": 0.0,
+      "omega": 0.5555555555555556,
+      "retrieval_drift": 0.8,
+      "source_attribution_accuracy": 1.0
+    },
+    "query": "What happened after calibration in the morning session?",
+    "query_id": "Q301",
+    "retrieval": [
+      {
+        "boundary_id": "B1",
+        "episode_id": "E301",
+        "rank": 1,
+        "score": 0.2,
+        "source_ref": "lab://runA/log#12"
+      },
+      {
+        "boundary_id": "B2",
+        "episode_id": "E302",
+        "rank": 2,
+        "score": 0.125,
+        "source_ref": "lab://runB/log#18"
+      }
+    ],
+    "selected_boundary_id": "B1",
+    "selected_episode_id": "E301",
+    "selected_source_ref": "lab://runA/log#12",
+    "task_id": "boundary_separation_001"
+  },
+  {
+    "boundary": "attribution_explains_runtime_choice_not_correctness_proof",
+    "decision": "fallback",
+    "drift_report": {
+      "omega": 0.5454545454545454,
+      "retrieval_drift": 0.8333333333333334,
+      "retrieval_score": 0.16666666666666666
+    },
+    "expected": {
+      "expected_behavior": "abstain",
+      "expected_boundary_id": null,
+      "expected_episode_id": null,
+      "forbidden_episode_id": null
+    },
+    "gate_reason": "task_expected_fallback_or_abstention",
+    "metrics": {
+      "abstention_correctness": 1.0,
+      "boundary_separation_score": null,
+      "fallback_correctness": 1.0,
+      "false_memory_frequency": null,
+      "omega": 0.5454545454545454,
+      "retrieval_drift": 0.8333333333333334,
+      "source_attribution_accuracy": null
+    },
+    "query": "What final deployment plan did Delta approve?",
+    "query_id": "Q401",
+    "retrieval": [
+      {
+        "boundary_id": null,
+        "episode_id": "E401",
+        "rank": 1,
+        "score": 0.16666666666666666,
+        "source_ref": "doc://delta/notes#p2"
+      }
+    ],
+    "selected_boundary_id": null,
+    "selected_episode_id": "E401",
+    "selected_source_ref": "doc://delta/notes#p2",
+    "task_id": "abstain_insufficient_evidence_001"
+  }
+]

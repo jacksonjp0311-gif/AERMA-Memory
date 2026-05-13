@@ -1,6 +1,8 @@
+from __future__ import annotations
+
 import json
 from pathlib import Path
-from typing import Dict, Any
+from typing import Any, Dict
 
 from aerma.core.episode import AgentEpisode
 from aerma.core.memory_store import AgentMemoryStore
@@ -38,15 +40,18 @@ class BenchmarkRunner:
         candidates = self.retrieval.retrieve(query, store.all_episodes(), top_k=3)
         top = candidates[0] if candidates else None
 
+        selected_episode_id = None
+        selected_source_ref = None
+        selected_boundary_id = None
+
         if top is None:
-            decision = "fallback"
-            selected_episode_id = None
-            selected_source_ref = None
             drift_report = self.drift.compute(0.0)
             gate_decision = self.gate.decide(drift_report, source_missing=True)
+            decision = gate_decision.decision
         else:
             selected_episode_id = top.episode.episode_id
             selected_source_ref = top.episode.source_ref
+            selected_boundary_id = top.episode.boundary_id
             drift_report = self.drift.compute(top.score)
             gate_decision = self.gate.decide(
                 drift_report,
@@ -73,6 +78,7 @@ class BenchmarkRunner:
             "gate_reason": gate_decision.reason,
             "selected_episode_id": selected_episode_id,
             "selected_source_ref": selected_source_ref,
+            "selected_boundary_id": selected_boundary_id,
             "retrieval_drift": drift_report.retrieval_drift,
             "omega": drift_report.omega,
             "message": message,
@@ -86,9 +92,44 @@ class BenchmarkRunner:
                 baseline.retrieve(query, store.all_episodes(), {"seed": seed})
             )
 
+        attribution = {
+            "task_id": task.get("task_id"),
+            "query_id": query_obj.get("query_id"),
+            "query": query,
+            "decision": decision,
+            "gate_reason": gate_decision.reason,
+            "selected_episode_id": selected_episode_id,
+            "selected_source_ref": selected_source_ref,
+            "selected_boundary_id": selected_boundary_id,
+            "retrieval": [
+                {
+                    "rank": idx + 1,
+                    "episode_id": c.episode.episode_id,
+                    "source_ref": c.episode.source_ref,
+                    "boundary_id": c.episode.boundary_id,
+                    "score": c.score,
+                }
+                for idx, c in enumerate(candidates)
+            ],
+            "drift_report": {
+                "retrieval_score": drift_report.retrieval_score,
+                "retrieval_drift": drift_report.retrieval_drift,
+                "omega": drift_report.omega,
+            },
+            "expected": {
+                "expected_episode_id": query_obj.get("expected_episode_id"),
+                "forbidden_episode_id": query_obj.get("forbidden_episode_id"),
+                "expected_behavior": query_obj.get("expected_behavior"),
+                "expected_boundary_id": query_obj.get("expected_boundary_id"),
+            },
+            "metrics": metrics,
+            "boundary": "attribution_explains_runtime_choice_not_correctness_proof",
+        }
+
         return {
             "task": task,
             "result": result,
             "metrics": metrics,
             "baseline_results": baseline_results,
+            "attribution": attribution,
         }

@@ -4,23 +4,22 @@
 
 ## Current drift status
 
-Manual review required.
+Manual review required, but v0.1.1 hardening reduces known scoring drift.
 
 ## Current known context state
 
-- RCC has been inserted after the first successful local run.
+- RCC has been inserted after successful local runs.
 - Mini READMEs are generated from current repository structure and intended AERMA v1.2-MVP behavior.
-- RCC records are useful for orientation but should not be treated as verified audit output.
 - Runtime code remains source of truth.
+- v0.1.1 hardening adds task-family-aware scoring, per-task attribution logs, and a regression guard baseline.
 
 ## Known drift surfaces
 
-- Scoring logic is early and needs hardening.
-- Current classification may be too permissive for public claims.
-- Attribution logs are not yet implemented.
-- Regression guard is not yet implemented.
-- RCC linter is not yet implemented.
+- Current attribution logs are deterministic scaffold attribution, not model-quality proof.
+- Regression guard is a local baseline lock, not independent validation.
+- RCC linter is still placeholder/manual-review mode.
 - Evidence dashboards are placeholders.
+- RecursiveExecutor and ReflectionEvaluator remain stubs.
 
 ## Required update triggers
 
