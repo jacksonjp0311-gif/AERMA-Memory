@@ -4,11 +4,11 @@
 
 ## Purpose
 
-Pytest validation surface for the AERMA-Memory reference scaffold.
+Pytest validation surface for the AERMA-Memory reference scaffold and v0.1.1 hardening layer.
 
 ## S - Formal specification
 
-This folder tests episode schema, memory store, metric manifest, drift geometry, action gate, fallback, baseline classes, benchmark runner, suite runner, evidence package, and agent stubs.
+This folder tests episode schema, memory store, metric manifest, drift geometry, action gate, fallback, baseline classes, benchmark runner, suite runner, evidence package, agent stubs, hardened scoring, and hardened suite outputs.
 
 ## H - Hooks and integration edges
 
@@ -30,6 +30,8 @@ This folder tests episode schema, memory store, metric manifest, drift geometry,
 - `test_evidence_package.py`.
 - `test_recursive_executor_stub.py`.
 - `test_reflection_evaluator_stub.py`.
+- `test_hardened_scoring.py`.
+- `test_hardened_suite_outputs.py`.
 
 ## T - Theory or method basis
 
@@ -40,6 +42,7 @@ Tests are the first validation gate. Passing tests is implementation evidence, n
 - Keep tests runnable from repo root.
 - Add tests for scoring or behavior changes.
 - Do not weaken tests to preserve claims.
+- Current expected result is `15 passed`.
 
 ## E - Example
 

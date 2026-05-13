@@ -131,10 +131,28 @@ Suite ledgers are written under:
 - Prevent AERMA-B classification unless stricter thresholds are satisfied.
 - Add RCC drift checker.
 
-
 ## v0.1.1 Hardening Layer
 
-The v0.1.1 hardening layer adds task-family-aware scoring, per-task attribution records, suite-level attribution output, and a regression guard baseline. This improves evidence calibration but does not change the non-claim locks.
+The v0.1.1 hardening layer is now active.
+
+Current local validation:
+
+    pytest -q
+
+Expected result:
+
+    15 passed
+
+Current local controlled-suite result:
+
+    suite_score: 1.0
+    classification: AERMA-B
+    source_attribution_accuracy: 1.0
+    fallback_correctness: 1.0
+    abstention_correctness: 1.0
+    boundary_separation_score: 1.0
+    false_memory_frequency: 0.0
+    regression_frequency: 0.0
 
 New hardening artifacts:
 
@@ -142,7 +160,16 @@ New hardening artifacts:
 - `runs/suite_*/regression_guard.json`
 - `logs/phase2/attribution/latest_aerma_attribution.json`
 - `logs/phase2/regression_guard/latest_aerma_regression_guard.json`
+- `scripts/run_aerma_regression_guard.py`
+- `tests/test_hardened_scoring.py`
+- `tests/test_hardened_suite_outputs.py`
 
 Run the regression guard viewer:
 
     python scripts/run_aerma_regression_guard.py
+
+### Hardening Boundary
+
+The `suite_score: 1.0` result applies only to the current small controlled task suite. It is local scaffold evidence, not broad validation, not production readiness, and not evidence of human memory, sentience, consciousness, biological memory, clinical memory, autonomous self-improvement, or universal AI mechanism.
+
+Next evidence expansion should add harder distractors, multiple queries per task, adversarial ambiguity, source collision, stale-memory conflict, and baseline delta reports.

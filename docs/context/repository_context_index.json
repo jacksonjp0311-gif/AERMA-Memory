@@ -1,119 +1,17 @@
 {
-  "schema": "RCC-v1.2-repository-context-index",
-  "repository": {
-    "name": "AERMA-Memory",
-    "root": ".",
-    "declared_profile": "RCC-Core",
-    "profile_claim_verified": false,
-    "last_verified": "2026-05-13",
-    "verification_mode": "manual"
-  },
   "context_budget_policy": {
-    "default_budget": "B2",
-    "patch_budget": "B3",
-    "integration_debug_budget": "B4",
+    "b5_escalation_allowed": true,
     "deep_audit_budget": "B5",
+    "default_budget": "B2",
+    "integration_debug_budget": "B4",
     "lowest_sufficient_context_rule": true,
-    "b5_escalation_allowed": true
+    "patch_budget": "B3"
   },
-  "rci_weight_policy": {
-    "profile": "default",
-    "weights": {
-      "source_fidelity": 0.2,
-      "validation_surface": 0.2,
-      "hook_topology": 0.2,
-      "context_budget": 0.1,
-      "drift_control": 0.2,
-      "update_compliance": 0.1
-    },
-    "declared": true,
-    "reason": "Default RCC v1.2 weighting for an early RCC-Core implementation."
-  },
-  "modules": [
-    {
-      "module_id": "src.aerma.core",
-      "path": "src/aerma/core",
-      "rcc_record": "src/aerma/core/README.md",
-      "status": "implemented",
-      "source_fidelity": "derived_from_current_scaffold",
-      "minimum_budget": "B2",
-      "source_budget": "B3",
-      "drift_status": "manual_review_required"
-    },
-    {
-      "module_id": "src.aerma.benchmarks",
-      "path": "src/aerma/benchmarks",
-      "rcc_record": "src/aerma/benchmarks/README.md",
-      "status": "implemented",
-      "source_fidelity": "derived_from_current_scaffold",
-      "minimum_budget": "B2",
-      "source_budget": "B3",
-      "drift_status": "manual_review_required"
-    },
-    {
-      "module_id": "src.aerma.evidence",
-      "path": "src/aerma/evidence",
-      "rcc_record": "src/aerma/evidence/README.md",
-      "status": "implemented",
-      "source_fidelity": "derived_from_current_scaffold",
-      "minimum_budget": "B2",
-      "source_budget": "B3",
-      "drift_status": "manual_review_required"
-    },
-    {
-      "module_id": "tasks",
-      "path": "tasks",
-      "rcc_record": "tasks/README.md",
-      "status": "implemented",
-      "source_fidelity": "derived_from_current_scaffold",
-      "minimum_budget": "B2",
-      "source_budget": "B3",
-      "drift_status": "manual_review_required"
-    }
-  ],
-  "hooks": [
-    {
-      "source": "tasks/suite_v1_2.json",
-      "target": "src/aerma/benchmarks/suite_runner.py",
-      "hook_type": "runtime_input",
-      "evidence": "SuiteRunner loads suite task references and executes BenchmarkRunner.",
-      "fidelity": "derived",
-      "weight": 0.9
-    },
-    {
-      "source": "src/aerma/benchmarks/benchmark_runner.py",
-      "target": "src/aerma/core",
-      "hook_type": "imports",
-      "evidence": "BenchmarkRunner imports AgentEpisode, AgentMemoryStore, MetricManifest, and RetrievalEngine.",
-      "fidelity": "derived",
-      "weight": 0.9
-    },
-    {
-      "source": "src/aerma/benchmarks/suite_runner.py",
-      "target": "src/aerma/evidence",
-      "hook_type": "writes",
-      "evidence": "SuiteRunner writes ledgers, run outputs, aggregate metrics, classifications, and evidence packages.",
-      "fidelity": "derived",
-      "weight": 0.9
-    }
-  ],
-  "validation": {
-    "install": [
-      "python -m pip install -e \".[dev]\""
-    ],
-    "test": [
-      "pytest -q"
-    ],
-    "suite": [
-      "python -m aerma.cli.main run-suite --suite \".\\tasks\\suite_v1_2.json\"",
-      "aerma run-suite --suite \".\\tasks\\suite_v1_2.json\""
-    ],
-    "expected_artifacts": [
-      "runs/suite_*/aggregate_metrics.json",
-      "runs/suite_*/suite_classification.json",
-      "evidence_packages/*_evidence_package.json",
-      "ledgers/aerma_suite_ledger.jsonl"
-    ]
+  "drift_linter": {
+    "enabled": false,
+    "failures": [],
+    "last_run": null,
+    "status": "manual_review_required_after_v0_1_1_hardening"
   },
   "evidence_packages": [
     {
@@ -123,26 +21,148 @@
       "status": "generated_by_suite_runs"
     }
   ],
-  "drift_linter": {
-    "enabled": false,
-    "last_run": null,
-    "status": "manual_review_required",
-    "failures": []
+  "hooks": [
+    {
+      "evidence": "SuiteRunner loads suite task references and executes BenchmarkRunner.",
+      "fidelity": "derived",
+      "hook_type": "runtime_input",
+      "source": "tasks/suite_v1_2.json",
+      "target": "src/aerma/benchmarks/suite_runner.py",
+      "weight": 0.9
+    },
+    {
+      "evidence": "BenchmarkRunner imports AgentEpisode, AgentMemoryStore, MetricManifest, and RetrievalEngine.",
+      "fidelity": "derived",
+      "hook_type": "imports",
+      "source": "src/aerma/benchmarks/benchmark_runner.py",
+      "target": "src/aerma/core",
+      "weight": 0.9
+    },
+    {
+      "evidence": "SuiteRunner writes ledgers, run outputs, aggregate metrics, classifications, and evidence packages.",
+      "fidelity": "derived",
+      "hook_type": "writes",
+      "source": "src/aerma/benchmarks/suite_runner.py",
+      "target": "src/aerma/evidence",
+      "weight": 0.9
+    }
+  ],
+  "latest_validation_snapshot": {
+    "abstention_correctness": 1.0,
+    "boundary": "local controlled-suite evidence only",
+    "boundary_separation_score": 1.0,
+    "classification": "AERMA-B",
+    "fallback_correctness": 1.0,
+    "false_memory_frequency": 0.0,
+    "regression_frequency": 0.0,
+    "source_attribution_accuracy": 1.0,
+    "suite_score": 1.0,
+    "test_result": "15 passed"
   },
-  "repository_context_integrity": {
-    "source_fidelity_completeness": 0.7,
-    "validation_surface_completeness": 0.8,
-    "hook_topology_completeness": 0.6,
-    "context_budget_completeness": 1.0,
-    "rcc_drift_score": 0.3,
-    "update_rule_compliance": 0.7,
-    "repository_context_integrity_index": 0.72
-  },
+  "modules": [
+    {
+      "drift_status": "manual_review_required",
+      "minimum_budget": "B2",
+      "module_id": "src.aerma.core",
+      "path": "src/aerma/core",
+      "rcc_record": "src/aerma/core/README.md",
+      "source_budget": "B3",
+      "source_fidelity": "derived_from_current_scaffold",
+      "status": "implemented"
+    },
+    {
+      "drift_status": "manual_review_required",
+      "minimum_budget": "B2",
+      "module_id": "src.aerma.benchmarks",
+      "path": "src/aerma/benchmarks",
+      "rcc_record": "src/aerma/benchmarks/README.md",
+      "source_budget": "B3",
+      "source_fidelity": "derived_from_current_scaffold",
+      "status": "implemented"
+    },
+    {
+      "drift_status": "manual_review_required",
+      "minimum_budget": "B2",
+      "module_id": "src.aerma.evidence",
+      "path": "src/aerma/evidence",
+      "rcc_record": "src/aerma/evidence/README.md",
+      "source_budget": "B3",
+      "source_fidelity": "derived_from_current_scaffold",
+      "status": "implemented"
+    },
+    {
+      "drift_status": "manual_review_required",
+      "minimum_budget": "B2",
+      "module_id": "tasks",
+      "path": "tasks",
+      "rcc_record": "tasks/README.md",
+      "source_budget": "B3",
+      "source_fidelity": "derived_from_current_scaffold",
+      "status": "implemented"
+    }
+  ],
   "non_claim_locks": [
     "context_reconstruction_is_not_correctness_proof",
     "generated_or_inserted_rcc_is_not_verified_context",
     "benchmark_claims_require_evidence_packages",
     "suite_execution_is_not_production_readiness",
     "agent_memory_is_not_human_memory"
-  ]
+  ],
+  "rci_weight_policy": {
+    "declared": true,
+    "profile": "default",
+    "reason": "Default RCC v1.2 weighting for an early RCC-Core implementation.",
+    "weights": {
+      "context_budget": 0.1,
+      "drift_control": 0.2,
+      "hook_topology": 0.2,
+      "source_fidelity": 0.2,
+      "update_compliance": 0.1,
+      "validation_surface": 0.2
+    }
+  },
+  "repository": {
+    "current_runtime_layer": "AERMA-Memory-v0.1.1-hardening",
+    "declared_profile": "RCC-Core",
+    "last_verified": "2026-05-13",
+    "name": "AERMA-Memory",
+    "profile_claim_verified": false,
+    "root": ".",
+    "verification_mode": "manual"
+  },
+  "repository_context_integrity": {
+    "context_budget_completeness": 1.0,
+    "hook_topology_completeness": 0.7,
+    "rcc_drift_score": 0.3,
+    "repository_context_integrity_index": 0.8,
+    "source_fidelity_completeness": 0.7,
+    "update_rule_compliance": 0.8,
+    "validation_surface_completeness": 0.9
+  },
+  "schema": "RCC-v1.2-repository-context-index",
+  "validation": {
+    "expected_artifacts": [
+      "runs/suite_*/aggregate_metrics.json",
+      "runs/suite_*/suite_classification.json",
+      "runs/suite_*/attribution_records.json",
+      "runs/suite_*/regression_guard.json",
+      "evidence_packages/*_evidence_package.json",
+      "ledgers/aerma_suite_ledger.jsonl",
+      "logs/phase2/attribution/latest_aerma_attribution.json",
+      "logs/phase2/regression_guard/latest_aerma_regression_guard.json"
+    ],
+    "install": [
+      "python -m pip install -e \".[dev]\""
+    ],
+    "regression_guard": [
+      "python scripts/run_aerma_regression_guard.py"
+    ],
+    "suite": [
+      "python -m aerma.cli.main run-suite --suite \".\\tasks\\suite_v1_2.json\"",
+      "aerma run-suite --suite \".\\tasks\\suite_v1_2.json\""
+    ],
+    "test": [
+      "pytest -q"
+    ]
+  }
 }
