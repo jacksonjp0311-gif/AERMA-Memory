@@ -1,0 +1,5 @@
+﻿{
+  "metric_family": "aerma_quality_metrics",
+  "version": "0.1.0",
+  "metrics": []
+}

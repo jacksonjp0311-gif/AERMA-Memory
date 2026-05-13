@@ -1,0 +1,36 @@
+﻿{
+  "task_id": "abstain_insufficient_evidence_001",
+  "task_family": "abstain_insufficient_evidence",
+  "episodes": [
+    {
+      "episode_id": "E401",
+      "context": "project_delta_notes",
+      "content": "Deployment planning was mentioned but no final decision was recorded.",
+      "time": "2026-04-06T10:00:00",
+      "agent_state": {"mode": "notes"},
+      "source_ref": "doc://delta/notes#p2",
+      "ledger_ref": "L401",
+      "claim_class": "source_bound_note"
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "Q401",
+      "query": "What final deployment plan did Delta approve?",
+      "expected_behavior": "abstain",
+      "allowed_fallback": ["abstain", "source_check", "uncertain"],
+      "forbidden_answer_contains": ["approved", "finalized", "green plan", "blue plan"]
+    }
+  ],
+  "metrics": [
+    "abstention_correctness",
+    "false_claim_frequency",
+    "fallback_correctness"
+  ],
+  "baselines": [
+    "database_lookup",
+    "vector_only",
+    "ungated_memory",
+    "random_control"
+  ]
+}

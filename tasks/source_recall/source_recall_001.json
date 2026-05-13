@@ -1,0 +1,46 @@
+﻿{
+  "task_id": "source_recall_001",
+  "task_family": "source_recall",
+  "episodes": [
+    {
+      "episode_id": "E001",
+      "context": "project_alpha_design_review",
+      "content": "Mira approved the green deployment plan for Alpha.",
+      "time": "2026-04-01T10:00:00",
+      "agent_state": {"mode": "meeting_notes"},
+      "source_ref": "doc://alpha/design_review#p3",
+      "ledger_ref": "L001",
+      "claim_class": "source_bound_note"
+    },
+    {
+      "episode_id": "E002",
+      "context": "project_alpha_followup",
+      "content": "Mira rejected the blue deployment plan for Alpha.",
+      "time": "2026-04-02T10:00:00",
+      "agent_state": {"mode": "followup_notes"},
+      "source_ref": "doc://alpha/followup#p2",
+      "ledger_ref": "L002",
+      "claim_class": "source_bound_note"
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "Q001",
+      "query": "Which deployment plan did Mira approve for Alpha?",
+      "expected_episode_id": "E001",
+      "forbidden_episode_id": "E002",
+      "expected_source_ref": "doc://alpha/design_review#p3"
+    }
+  ],
+  "metrics": [
+    "source_attribution_accuracy",
+    "false_memory_frequency",
+    "retrieval_drift"
+  ],
+  "baselines": [
+    "database_lookup",
+    "vector_only",
+    "ungated_memory",
+    "random_control"
+  ]
+}

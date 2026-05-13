@@ -1,0 +1,9 @@
+﻿{
+  "baselines": [
+    "database_lookup",
+    "vector_only",
+    "ungated_memory",
+    "random_control"
+  ],
+  "fairness_policy": "Baselines must run on the same task data, query set, and metric rules as the AERMA runtime."
+}

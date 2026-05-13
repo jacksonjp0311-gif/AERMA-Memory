@@ -1,0 +1,31 @@
+﻿__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+
+# Runtime outputs
+runs/*
+!runs/.gitkeep
+evidence_packages/*
+!evidence_packages/.gitkeep
+logs/**/*.tmp
+logs/**/*.cache
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large/local data
+data/
+datasets/
+raw/

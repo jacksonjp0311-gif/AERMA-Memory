@@ -1,0 +1,46 @@
+﻿{
+  "task_id": "boundary_separation_001",
+  "task_family": "boundary_separation",
+  "episodes": [
+    {
+      "episode_id": "E301",
+      "context": "morning_lab_session",
+      "content": "The sample warmed after calibration.",
+      "boundary_id": "B1",
+      "time": "2026-04-05T09:00:00",
+      "source_ref": "lab://runA/log#12",
+      "ledger_ref": "L301",
+      "claim_class": "source_bound_note"
+    },
+    {
+      "episode_id": "E302",
+      "context": "afternoon_lab_session",
+      "content": "The sample cooled after recalibration.",
+      "boundary_id": "B2",
+      "time": "2026-04-05T15:00:00",
+      "source_ref": "lab://runB/log#18",
+      "ledger_ref": "L302",
+      "claim_class": "source_bound_note"
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "Q301",
+      "query": "What happened after calibration in the morning session?",
+      "expected_episode_id": "E301",
+      "forbidden_episode_id": "E302",
+      "expected_boundary_id": "B1"
+    }
+  ],
+  "metrics": [
+    "boundary_separation_score",
+    "boundary_blending_error",
+    "source_attribution_accuracy"
+  ],
+  "baselines": [
+    "database_lookup",
+    "vector_only",
+    "ungated_memory",
+    "random_control"
+  ]
+}

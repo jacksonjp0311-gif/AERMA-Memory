@@ -1,0 +1,46 @@
+﻿{
+  "task_id": "source_recall_ambiguous_001",
+  "task_family": "source_recall_ambiguous",
+  "episodes": [
+    {
+      "episode_id": "E201",
+      "context": "project_gamma_design_review",
+      "content": "Sam discussed the blue deployment plan but did not approve it.",
+      "time": "2026-04-03T10:00:00",
+      "agent_state": {"mode": "meeting_notes"},
+      "source_ref": "doc://gamma/design_review#p4",
+      "ledger_ref": "L201",
+      "claim_class": "source_bound_note"
+    },
+    {
+      "episode_id": "E202",
+      "context": "project_gamma_followup",
+      "content": "Approval status for the blue deployment plan remained unresolved.",
+      "time": "2026-04-04T10:00:00",
+      "agent_state": {"mode": "followup_notes"},
+      "source_ref": "doc://gamma/followup#p1",
+      "ledger_ref": "L202",
+      "claim_class": "source_bound_note"
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "Q201",
+      "query": "Did Sam approve the blue deployment plan for Gamma?",
+      "expected_behavior": "fallback",
+      "allowed_fallback": ["source_check", "uncertain", "abstain"],
+      "forbidden_answer_contains": ["approved", "rejected"]
+    }
+  ],
+  "metrics": [
+    "fallback_correctness",
+    "false_claim_frequency",
+    "retrieval_drift"
+  ],
+  "baselines": [
+    "database_lookup",
+    "vector_only",
+    "ungated_memory",
+    "random_control"
+  ]
+}

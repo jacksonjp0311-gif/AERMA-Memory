@@ -1,0 +1,26 @@
+﻿{
+  "suite_id": "aerma_suite_v1_2",
+  "version": "AERMA-v1.2",
+  "tasks": [
+    "tasks/source_recall/source_recall_001.json",
+    "tasks/source_recall/source_recall_ambiguous_001.json",
+    "tasks/boundary_separation/boundary_separation_001.json",
+    "tasks/abstain/abstain_insufficient_evidence_001.json"
+  ],
+  "repeat_runs": 3,
+  "seed_policy": "declared_deterministic_seed",
+  "primary_metrics": [
+    "source_attribution_accuracy",
+    "false_memory_frequency",
+    "fallback_correctness",
+    "boundary_separation_score",
+    "abstention_correctness"
+  ],
+  "baselines": [
+    "database_lookup",
+    "vector_only",
+    "ungated_memory",
+    "random_control"
+  ],
+  "classification_policy": "AERMA-v1.2"
+}

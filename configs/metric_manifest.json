@@ -1,0 +1,13 @@
+﻿{
+  "drift_allow_threshold": 0.45,
+  "drift_fallback_threshold": 0.60,
+  "suite_score_threshold": 0.90,
+  "regression_threshold": 0.05,
+  "primary_metrics": [
+    "source_attribution_accuracy",
+    "false_memory_frequency",
+    "fallback_correctness",
+    "boundary_separation_score",
+    "abstention_correctness"
+  ]
+}
