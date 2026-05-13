@@ -1,4 +1,4 @@
-﻿import json
+import json
 from pathlib import Path
 from typing import Dict, Any
 
@@ -22,7 +22,7 @@ class BenchmarkRunner:
         self.fallback = SourceFallback()
 
     def load_task(self, path: str | Path) -> Dict[str, Any]:
-        return json.loads(Path(path).read_text(encoding="utf-8"))
+        return json.loads(Path(path).read_text(encoding="utf-8-sig"))
 
     def run_task(self, task_path: str | Path, seed: int = 42) -> Dict[str, Any]:
         task = self.load_task(task_path)

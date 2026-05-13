@@ -1,4 +1,4 @@
-﻿{
+{
   "drift_allow_threshold": 0.45,
   "drift_fallback_threshold": 0.60,
   "suite_score_threshold": 0.90,

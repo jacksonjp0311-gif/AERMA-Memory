@@ -1,4 +1,4 @@
-﻿{
+{
   "suite_id": "aerma_suite_v1_2",
   "repeat_runs": 3,
   "seed_policy": "declared_deterministic_seed",

@@ -1,4 +1,4 @@
-﻿import json
+import json
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, Any, List
@@ -19,7 +19,7 @@ class SuiteRunner:
 
     def run_suite(self, suite_path: str | Path) -> Dict[str, Any]:
         suite_path = Path(suite_path)
-        suite = json.loads(suite_path.read_text(encoding="utf-8"))
+        suite = json.loads(suite_path.read_text(encoding="utf-8-sig"))
 
         run_id = "suite_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
         run_dir = self.root / "runs" / run_id
