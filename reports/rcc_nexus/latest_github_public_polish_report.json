@@ -1,0 +1,78 @@
+﻿{
+    "schema":  "AERMA-RCC-N-public-polish-v1",
+    "timestamp":  "2026-05-14T15:50:34.6383617Z",
+    "status":  "pass",
+    "repo":  "jacksonjp0311-gif/AERMA-Memory",
+    "branch":  "main",
+    "commit":  "f7bb572",
+    "description_target":  "Governed agentic episodic memory workbench with RCC-N repo-context navigation, source-bound recall, fallback/abstention benchmarks, evidence packages, and regression guards.",
+    "topics_target":  [
+                          "agentic-memory",
+                          "episodic-memory",
+                          "governed-ai",
+                          "ai-safety",
+                          "benchmark-suite",
+                          "repository-context",
+                          "rcc",
+                          "rcc-nexus",
+                          "agent-navigation",
+                          "evidence-packages"
+                      ],
+    "public_targets":  [
+                           {
+                               "name":  "README",
+                               "url":  "https://raw.githubusercontent.com/jacksonjp0311-gif/AERMA-Memory/main/README.md?cacheBust=1778773767",
+                               "status":  "pass",
+                               "content_length":  19161,
+                               "missing":  [
+
+                                           ]
+                           },
+                           {
+                               "name":  "RCC-N benchmark report",
+                               "url":  "https://raw.githubusercontent.com/jacksonjp0311-gif/AERMA-Memory/main/reports/rcc_nexus/latest_rcc_nexus_benchmark.md?cacheBust=1778773767",
+                               "status":  "pass",
+                               "content_length":  795,
+                               "missing":  [
+
+                                           ]
+                           },
+                           {
+                               "name":  "RCC-N scorecard",
+                               "url":  "https://raw.githubusercontent.com/jacksonjp0311-gif/AERMA-Memory/main/reports/rcc_nexus/rcc_nexus_scorecard.md?cacheBust=1778773767",
+                               "status":  "pass",
+                               "content_length":  209,
+                               "missing":  [
+
+                                           ]
+                           },
+                           {
+                               "name":  "NCI components chart",
+                               "url":  "https://raw.githubusercontent.com/jacksonjp0311-gif/AERMA-Memory/main/visuals/rcc_nexus/nci_components.svg?cacheBust=1778773767",
+                               "status":  "pass",
+                               "content_length":  1893,
+                               "missing":  [
+
+                                           ]
+                           },
+                           {
+                               "name":  "Coverage chart",
+                               "url":  "https://raw.githubusercontent.com/jacksonjp0311-gif/AERMA-Memory/main/visuals/rcc_nexus/rcc_nexus_coverage_chart.svg?cacheBust=1778773767",
+                               "status":  "pass",
+                               "content_length":  1445,
+                               "missing":  [
+
+                                           ]
+                           },
+                           {
+                               "name":  "Health trend chart",
+                               "url":  "https://raw.githubusercontent.com/jacksonjp0311-gif/AERMA-Memory/main/visuals/rcc_nexus/rcc_nexus_health_trend.svg?cacheBust=1778773767",
+                               "status":  "pass",
+                               "content_length":  644,
+                               "missing":  [
+
+                                           ]
+                           }
+                       ],
+    "claim_boundary":  "GitHub public polish and RCC-N reports improve discoverability and context navigation. They do not prove code correctness, security, patch safety, AI understanding, benchmark validity, or production readiness."
+}
