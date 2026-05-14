@@ -1,0 +1,17 @@
+﻿{
+    "schema":  "AERMA-RCC-N-validation-repair-v1",
+    "timestamp":  "2026-05-14T15:52:43.9774539Z",
+    "commit":  "f779f32",
+    "status":  "pass",
+    "repair":  "Activated .venv, installed package editable, verified aerma import, reran full validation.",
+    "validation":  {
+                       "regression_guard":  "pass",
+                       "suite":  "pass",
+                       "pytest":  "pass",
+                       "rcc_nexus_benchmark":  "pass",
+                       "rcc_nexus_charts":  "pass",
+                       "rcc_drift":  "pass",
+                       "rcc_nexus":  "pass"
+                   },
+    "claim_boundary":  "Validation repair confirms local package/runtime validation in the active environment. It does not prove production readiness, security, patch safety, AI understanding, or broad benchmark validity."
+}
