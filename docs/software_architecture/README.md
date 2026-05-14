@@ -48,3 +48,16 @@ Read the RCC Echo architecture:
 
 <!-
 - RCC-MINI-README:END -->
+
+## RCC-N v1.0 Nexus Architecture
+
+The RCC-N v1.0 architecture documents the next local integration layer for AERMA-Memory.
+
+Primary files:
+
+- `rcc_nexus_software_architecture_v1_0.md`
+- `rcc_nexus_implementation_contract_v1_0.md`
+
+Boundary:
+
+RCC-N improves repository navigation, agent self-location, Echo Location records, route maps, and Nexus Context Integrity. It does not prove code correctness, security, patch safety, model understanding, human memory, sentience, or production readiness.

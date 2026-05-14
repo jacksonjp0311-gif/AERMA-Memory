@@ -565,3 +565,24 @@ This repository is strongest when claim boundaries stay visible. Do not optimize
 
 <!-
 - RCC-AI-README:END -->
+
+## RCC-N v1.0 Nexus Architecture
+
+AERMA-Memory now has an architecture lock for RCC Nexus local integration.
+
+Architecture documents:
+
+- `docs/software_architecture/rcc_nexus_software_architecture_v1_0.md`
+- `docs/software_architecture/rcc_nexus_implementation_contract_v1_0.md`
+
+RCC-N v1.0 evolves the repository context layer from Human/AI readability into Human/RCC Nexus/AI trisection and geometric repository navigation.
+
+Implementation status:
+
+- Architecture: locked.
+- Local implementation: next pass.
+- Runtime behavior: unchanged by this architecture lock.
+
+Boundary:
+
+RCC-N improves agent navigation and repository-context integrity. It does not prove code correctness, security, patch safety, model understanding, or production readiness.

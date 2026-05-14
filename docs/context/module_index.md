@@ -101,3 +101,12 @@ The validation snapshot is local controlled-suite evidence only.
 | `docs/software_architecture/aerma_rcc_echo_location_architecture_v0_1_2.md` | Defines planned AGENTS.md, CLAUDE.md, `rcc/`, route maps, checks, reports, templates, and schemas | Medium |
 
 Architecture documents define intended structure and validation surfaces. They do not prove implementation correctness.
+
+## RCC-N Nexus Architecture Surface
+
+| Module | Path | Role | Runtime claim sensitivity |
+|---|---|---|---|
+| RCC-N software architecture | `docs/software_architecture/rcc_nexus_software_architecture_v1_0.md` | Defines Human/RCC Nexus/AI trisection, sphere, coordinates, Echo Location, route maps, NCI, and drift | Medium |
+| RCC-N implementation contract | `docs/software_architecture/rcc_nexus_implementation_contract_v1_0.md` | Defines exact local implementation surfaces for RCC-N integration | Medium |
+
+Boundary: These documents lock implementation direction. They do not prove code correctness or runtime validity.
