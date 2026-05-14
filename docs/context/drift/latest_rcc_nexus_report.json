@@ -1,0 +1,15 @@
+{
+  "claim_boundary": "RCC Nexus is context/navigation integrity only, not code correctness proof.",
+  "computed_nci": 0.96,
+  "findings": [],
+  "non_claim_locks": {
+    "context_reconstruction_is_not_correctness_proof": true,
+    "geometry_is_not_ai_internal_proof": true,
+    "navigation_is_not_validation": true,
+    "nci_is_not_code_quality_proof": true,
+    "validation_remains_required": true
+  },
+  "schema": "RCC-N-v1.0-check-result",
+  "status": "pass",
+  "timestamp": "2026-05-14T15:34:37.053230+00:00"
+}

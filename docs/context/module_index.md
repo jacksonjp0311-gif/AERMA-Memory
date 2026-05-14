@@ -110,3 +110,14 @@ Architecture documents define intended structure and validation surfaces. They d
 | RCC-N implementation contract | `docs/software_architecture/rcc_nexus_implementation_contract_v1_0.md` | Defines exact local implementation surfaces for RCC-N integration | Medium |
 
 Boundary: These documents lock implementation direction. They do not prove code correctness or runtime validity.
+
+## RCC-N Local Nexus Layer
+
+| Module | Path | Role | Runtime claim sensitivity |
+|---|---|---|---|
+| RCC Nexus index | `docs/context/rcc_nexus_index.json` | Machine-readable sphere, coordinates, NCI, route maps, and locks | Medium |
+| RCC Nexus local layer | `rcc/nexus/` | Route maps, protocol, task matrix, handoff, Echo template | Medium |
+| RCC Nexus checker | `scripts/rcc/check_rcc_nexus.py` | Validates trisection, index, route map, NCI, and Echo blocks | Medium |
+| RCC Nexus reports | `docs/context/drift/latest_rcc_nexus_report.*` | Generated Nexus integrity reports | Medium |
+
+Boundary: RCC-N is navigation/context integrity only, not code correctness.

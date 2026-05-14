@@ -51,3 +51,43 @@ Run all tests:
     pytest -q
 
 <!-- RCC-MINI-README:END -->
+
+## RCC Nexus Echo Location
+
+Sphere Position:
+- Shell: middle
+- Meridian(s): validation, safety
+- Sector: core
+- Version / TTL: RCC-N-v1.0 / 180 days
+- Last Verified: 2026-05-14
+
+Local Role:
+- Stores pytest validation for the current reference scaffold.
+
+Inbound Hooks:
+- src/aerma/**
+
+Outbound Hooks:
+- pytest -q
+
+Evidence Surface:
+- pytest output
+
+Validation Surface:
+- pytest -q
+
+Claim Boundary:
+- Tests are implementation health evidence, not truth proof.
+
+Non-Claim Locks:
+- geometry_is_not_ai_internal_proof
+- nci_is_not_code_quality_proof
+- navigation_is_not_validation
+- context_reconstruction_is_not_correctness_proof
+- validation_remains_required
+
+Agent Route:
+- Read this README before modifying tests or interpreting validation status.
+
+Update Obligation:
+- Update when test scope or expected count changes.

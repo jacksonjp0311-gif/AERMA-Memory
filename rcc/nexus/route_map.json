@@ -1,0 +1,119 @@
+{
+  "entry_order": [
+    "README.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "docs/context/repository_context_index.json",
+    "docs/context/rcc_nexus_index.json",
+    "docs/context/validation_surface.md"
+  ],
+  "non_claim_locks": [
+    "geometry_is_not_ai_internal_proof",
+    "nci_is_not_code_quality_proof",
+    "navigation_is_not_validation",
+    "context_reconstruction_is_not_correctness_proof",
+    "validation_remains_required"
+  ],
+  "repo": "AERMA-Memory",
+  "schema": "RCC-N-v1.0-route-map",
+  "task_routes": {
+    "benchmark_task_change": {
+      "edit_surface": [
+        "tasks/**",
+        "src/aerma/benchmarks/**",
+        "tests/**"
+      ],
+      "nexus_update": "required_if_suite_or_validation_surface_changes",
+      "read_first": [
+        "tasks/README.md",
+        "src/aerma/benchmarks/README.md"
+      ],
+      "validation": [
+        "pytest -q",
+        "python -m aerma.cli.main run-suite --suite .\\tasks\\suite_v1_2.json",
+        "python scripts/run_aerma_regression_guard.py"
+      ]
+    },
+    "documentation_change": {
+      "edit_surface": [
+        "README.md",
+        "docs/**",
+        "target_folder/README.md"
+      ],
+      "nexus_update": "required_if_role_hooks_validation_evidence_or_claims_change",
+      "read_first": [
+        "README.md",
+        "target_folder/README.md",
+        "docs/context/rcc_nexus_index.json"
+      ],
+      "validation": [
+        "powershell -ExecutionPolicy Bypass -File .\\scripts\\rcc\\check_rcc_drift.ps1",
+        "python scripts/rcc/check_rcc_nexus.py"
+      ]
+    },
+    "public_claim_change": {
+      "edit_surface": [
+        "README.md",
+        "docs/context/**",
+        "docs/software_architecture/**"
+      ],
+      "nexus_update": "always_required",
+      "read_first": [
+        "README.md",
+        "docs/context/validation_surface.md",
+        "docs/context/rcc_nexus_index.json"
+      ],
+      "validation": [
+        "pytest -q",
+        "python -m aerma.cli.main run-suite --suite .\\tasks\\suite_v1_2.json",
+        "python scripts/run_aerma_regression_guard.py",
+        "python scripts/rcc/check_rcc_nexus.py"
+      ]
+    },
+    "rcc_nexus_change": {
+      "edit_surface": [
+        "rcc/nexus/**",
+        "docs/context/**",
+        "scripts/rcc/check_rcc_nexus.py",
+        "README.md"
+      ],
+      "nexus_update": "always_required",
+      "read_first": [
+        "README.md",
+        "rcc/nexus/README.md",
+        "docs/context/rcc_nexus_index.json"
+      ],
+      "validation": [
+        "python scripts/rcc/check_rcc_nexus.py",
+        "powershell -ExecutionPolicy Bypass -File .\\scripts\\rcc\\check_rcc_drift.ps1"
+      ]
+    },
+    "read_only_review": {
+      "edit_surface": [],
+      "nexus_update": "not_required_unless_stale_context_found",
+      "read_first": [
+        "README.md",
+        "docs/context/module_index.md",
+        "docs/context/rcc_nexus_index.json"
+      ],
+      "validation": []
+    },
+    "runtime_change": {
+      "edit_surface": [
+        "src/aerma/**",
+        "tests/**"
+      ],
+      "nexus_update": "required_if_hooks_validation_evidence_or_claim_boundaries_change",
+      "read_first": [
+        "README.md",
+        "src/aerma/README.md",
+        "target_module/README.md"
+      ],
+      "validation": [
+        "pytest -q",
+        "python -m aerma.cli.main run-suite --suite .\\tasks\\suite_v1_2.json",
+        "python scripts/run_aerma_regression_guard.py"
+      ]
+    }
+  }
+}

@@ -1,0 +1,359 @@
+{
+  "nci": {
+    "components": {
+      "completeness": {
+        "algorithm": "required_nexus_sections_present / required_nexus_sections",
+        "score": 1.0
+      },
+      "coordinate_completeness": {
+        "algorithm": "nodes_with_shell_meridian_sector_ttl / total_nodes",
+        "score": 1.0
+      },
+      "drift_freshness": {
+        "algorithm": "1 - geometric_drift_score",
+        "score": 0.95
+      },
+      "evidence_validation_linkage": {
+        "algorithm": "records_with_required_evidence_and_validation / required_records",
+        "score": 0.9
+      },
+      "invariant_compliance": {
+        "algorithm": "records_preserving_non_claim_locks / total_records",
+        "score": 1.0
+      },
+      "link_correctness": {
+        "algorithm": "declared_hooks_resolve_or_are_explicitly_external / declared_hooks",
+        "score": 0.9
+      },
+      "pattern_rigidity": {
+        "algorithm": "template_conforming_records / total_records",
+        "score": 0.95
+      }
+    },
+    "mode": "self",
+    "weights": {
+      "completeness": 0.15,
+      "coordinate_completeness": 0.15,
+      "drift_freshness": 0.1,
+      "evidence_validation_linkage": 0.15,
+      "invariant_compliance": 0.2,
+      "link_correctness": 0.15,
+      "pattern_rigidity": 0.1
+    }
+  },
+  "nodes": [
+    {
+      "claim_boundary": [
+        "readme_quality_is_not_runtime_validity",
+        "nci_is_not_code_quality_proof"
+      ],
+      "echo_location_path": "README.md#part-ii---rcc-nexus-readme",
+      "evidence_surface": [
+        "docs/context/drift/latest_rcc_nexus_report.json"
+      ],
+      "inbound_hooks": [
+        "AGENTS.md",
+        "CLAUDE.md"
+      ],
+      "last_verified": "2026-05-14",
+      "meridians": [
+        "source",
+        "agent",
+        "safety",
+        "release"
+      ],
+      "node_type": "root_readme",
+      "outbound_hooks": [
+        "docs/context/repository_context_index.json",
+        "docs/context/rcc_nexus_index.json",
+        "rcc/nexus/route_map.json"
+      ],
+      "path": "README.md",
+      "sector": "rcc",
+      "shell": "center",
+      "ttl_days": 180,
+      "validation_surface": [
+        "python scripts/rcc/check_rcc_nexus.py"
+      ]
+    },
+    {
+      "claim_boundary": [
+        "context_index_is_not_source_truth"
+      ],
+      "echo_location_path": "docs/context/rcc_nexus_index.json",
+      "evidence_surface": [
+        "docs/context/drift/latest_rcc_nexus_report.json"
+      ],
+      "inbound_hooks": [
+        "README.md",
+        "rcc/nexus/route_map.json"
+      ],
+      "last_verified": "2026-05-14",
+      "meridians": [
+        "source",
+        "validation",
+        "evidence",
+        "drift",
+        "agent",
+        "safety"
+      ],
+      "node_type": "context_surface",
+      "outbound_hooks": [
+        "docs/context/drift/latest_rcc_nexus_report.json"
+      ],
+      "path": "docs/context",
+      "sector": "rcc",
+      "shell": "outer",
+      "ttl_days": 180,
+      "validation_surface": [
+        "python scripts/rcc/check_rcc_nexus.py"
+      ]
+    },
+    {
+      "claim_boundary": [
+        "architecture_is_not_implementation_proof"
+      ],
+      "echo_location_path": "docs/software_architecture/README.md#rcc-nexus-echo-location",
+      "evidence_surface": [
+        "docs/software_architecture/rcc_nexus_implementation_contract_v1_0.md"
+      ],
+      "inbound_hooks": [
+        "README.md"
+      ],
+      "last_verified": "2026-05-14",
+      "meridians": [
+        "source",
+        "agent",
+        "safety",
+        "release"
+      ],
+      "node_type": "architecture_surface",
+      "outbound_hooks": [
+        "docs/software_architecture/rcc_nexus_software_architecture_v1_0.md"
+      ],
+      "path": "docs/software_architecture",
+      "sector": "rcc",
+      "shell": "outer",
+      "ttl_days": 180,
+      "validation_surface": [
+        "pytest -q",
+        "python scripts/rcc/check_rcc_nexus.py"
+      ]
+    },
+    {
+      "claim_boundary": [
+        "suite_score_is_local_controlled_suite_evidence_only"
+      ],
+      "echo_location_path": "src/aerma/benchmarks/README.md#rcc-nexus-echo-location",
+      "evidence_surface": [
+        "runs/suite_*/aggregate_metrics.json",
+        "evidence_packages/*_evidence_package.json"
+      ],
+      "inbound_hooks": [
+        "tasks/suite_v1_2.json",
+        "src/aerma/cli/main.py"
+      ],
+      "last_verified": "2026-05-14",
+      "meridians": [
+        "runtime",
+        "validation",
+        "evidence",
+        "safety"
+      ],
+      "node_type": "source_module",
+      "outbound_hooks": [
+        "runs/",
+        "evidence_packages/",
+        "ledgers/aerma_suite_ledger.jsonl"
+      ],
+      "path": "src/aerma/benchmarks",
+      "sector": "benchmark",
+      "shell": "middle",
+      "ttl_days": 180,
+      "validation_surface": [
+        "pytest -q",
+        "python -m aerma.cli.main run-suite --suite .\\tasks\\suite_v1_2.json"
+      ]
+    },
+    {
+      "claim_boundary": [
+        "evidence_package_is_bound_to_declared_task_surface"
+      ],
+      "echo_location_path": "src/aerma/evidence/README.md#rcc-nexus-echo-location",
+      "evidence_surface": [
+        "evidence_packages/"
+      ],
+      "inbound_hooks": [
+        "src/aerma/benchmarks/suite_runner.py"
+      ],
+      "last_verified": "2026-05-14",
+      "meridians": [
+        "evidence",
+        "runtime",
+        "safety"
+      ],
+      "node_type": "source_module",
+      "outbound_hooks": [
+        "evidence_packages/"
+      ],
+      "path": "src/aerma/evidence",
+      "sector": "evidence",
+      "shell": "middle",
+      "ttl_days": 180,
+      "validation_surface": [
+        "pytest -q"
+      ]
+    },
+    {
+      "claim_boundary": [
+        "controlled_tasks_do_not_prove_broad_generalization"
+      ],
+      "echo_location_path": "tasks/README.md#rcc-nexus-echo-location",
+      "evidence_surface": [
+        "runs/suite_*/aggregate_metrics.json"
+      ],
+      "inbound_hooks": [
+        "src/aerma/benchmarks/suite_runner.py"
+      ],
+      "last_verified": "2026-05-14",
+      "meridians": [
+        "validation",
+        "runtime",
+        "evidence"
+      ],
+      "node_type": "benchmark_tasks",
+      "outbound_hooks": [
+        "runs/",
+        "evidence_packages/"
+      ],
+      "path": "tasks",
+      "sector": "benchmark",
+      "shell": "middle",
+      "ttl_days": 180,
+      "validation_surface": [
+        "python -m aerma.cli.main run-suite --suite .\\tasks\\suite_v1_2.json"
+      ]
+    },
+    {
+      "claim_boundary": [
+        "tests_are_implementation_health_not_truth"
+      ],
+      "echo_location_path": "tests/README.md#rcc-nexus-echo-location",
+      "evidence_surface": [
+        "pytest output"
+      ],
+      "inbound_hooks": [
+        "src/aerma/**"
+      ],
+      "last_verified": "2026-05-14",
+      "meridians": [
+        "validation",
+        "safety"
+      ],
+      "node_type": "test_surface",
+      "outbound_hooks": [
+        "pytest -q"
+      ],
+      "path": "tests",
+      "sector": "core",
+      "shell": "middle",
+      "ttl_days": 180,
+      "validation_surface": [
+        "pytest -q"
+      ]
+    },
+    {
+      "claim_boundary": [
+        "nexus_navigation_is_not_validation"
+      ],
+      "echo_location_path": "rcc/nexus/README.md#rcc-nexus-echo-location",
+      "evidence_surface": [
+        "docs/context/drift/latest_rcc_nexus_report.json"
+      ],
+      "inbound_hooks": [
+        "README.md",
+        "docs/context/rcc_nexus_index.json"
+      ],
+      "last_verified": "2026-05-14",
+      "meridians": [
+        "source",
+        "agent",
+        "safety",
+        "validation",
+        "drift"
+      ],
+      "node_type": "nexus_layer",
+      "outbound_hooks": [
+        "scripts/rcc/check_rcc_nexus.py",
+        "docs/context/drift/latest_rcc_nexus_report.json"
+      ],
+      "path": "rcc/nexus",
+      "sector": "rcc",
+      "shell": "middle",
+      "ttl_days": 180,
+      "validation_surface": [
+        "python scripts/rcc/check_rcc_nexus.py"
+      ]
+    }
+  ],
+  "non_claim_locks": {
+    "context_reconstruction_is_not_correctness_proof": true,
+    "geometry_is_not_ai_internal_proof": true,
+    "navigation_is_not_validation": true,
+    "nci_is_not_code_quality_proof": true,
+    "validation_remains_required": true
+  },
+  "readme_trisection": {
+    "ai_agent_layer_present": true,
+    "human_layer_present": true,
+    "layer_fusion_detected": false,
+    "rcc_nexus_layer_present": true
+  },
+  "repository": {
+    "last_verified": "2026-05-14",
+    "name": "AERMA-Memory",
+    "nexus_version": "RCC-N-v1.0",
+    "rcc_base": "RCC-v1.3-compatible",
+    "root": ".",
+    "verification_mode": "self"
+  },
+  "route_maps": [
+    "rcc/nexus/route_map.json",
+    "rcc/nexus/task_routing_matrix.md"
+  ],
+  "schema": "RCC-N-v1.0-nexus-index",
+  "sphere": {
+    "meridians": [
+      "source",
+      "validation",
+      "evidence",
+      "drift",
+      "agent",
+      "safety",
+      "runtime",
+      "memory",
+      "release",
+      "federation"
+    ],
+    "model": "spherical_echo_architecture",
+    "sectors": [
+      "core",
+      "schemas",
+      "retrieval",
+      "drift",
+      "gate",
+      "benchmark",
+      "cli",
+      "evidence",
+      "rcc",
+      "agent",
+      "release"
+    ],
+    "shells": [
+      "center",
+      "inner",
+      "middle",
+      "outer"
+    ]
+  }
+}

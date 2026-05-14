@@ -98,3 +98,19 @@ After implementation, also run:
     python scripts/rcc/check_rcc_nexus.py
 
 Boundary: RCC-N architecture is not runtime proof.
+
+## RCC-N Local Validation
+
+Run the local RCC Nexus checker:
+
+    python scripts/rcc/check_rcc_nexus.py
+
+Full validation after RCC-N changes:
+
+    pytest -q
+    python -m aerma.cli.main run-suite --suite .\tasks\suite_v1_2.json
+    python scripts/run_aerma_regression_guard.py
+    powershell -ExecutionPolicy Bypass -File .\scripts\rcc\check_rcc_drift.ps1
+    python scripts/rcc/check_rcc_nexus.py
+
+Boundary: RCC-N local validation does not prove code correctness.

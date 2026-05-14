@@ -324,7 +324,7 @@ Near-term next steps:
 <!-
 - RCC-AI-README:START -->
 
-# PART II - AI / RCC Agent README
+# PART III - AI Agent README
 
 #
 # AI version tracking contract
@@ -586,3 +586,155 @@ Implementation status:
 Boundary:
 
 RCC-N improves agent navigation and repository-context integrity. It does not prove code correctness, security, patch safety, model understanding, or production readiness.
+
+# PART II - RCC Nexus README
+
+## RCC Nexus Identity
+
+AERMA-Memory now includes a local RCC Nexus layer based on RCC-N v1.0.
+
+RCC tells the agent what the repository means.
+
+RCC-N tells the agent where it is.
+
+Validation tells the agent whether reality agreed.
+
+## Repository Sphere
+
+| Shell | Name | Meaning |
+|---|---|---|
+| `center` | Invariant Core | Purpose, non-claim locks, evidence boundaries, safety rules. |
+| `inner` | Primitives | Source objects, core modules, schemas, retrieval and gate primitives. |
+| `middle` | Processes | Runners, benchmark flow, scripts, checks, validation workflows. |
+| `outer` | Evidence / Reflection | Ledgers, reports, evidence packages, architecture, public outputs. |
+
+## Nexus Meridians
+
+- source
+- validation
+- evidence
+- drift
+- agent
+- safety
+- runtime
+- memory
+- release
+- federation
+
+## Nexus Sectors
+
+- core
+- schemas
+- retrieval
+- drift
+- gate
+- benchmark
+- cli
+- evidence
+- rcc
+- agent
+- release
+
+## Primary Nexus Files
+
+- `docs/context/rcc_nexus_index.json`
+- `rcc/nexus/README.md`
+- `rcc/nexus/rcc_nexus_protocol.md`
+- `rcc/nexus/route_map.json`
+- `rcc/nexus/task_routing_matrix.md`
+- `rcc/nexus/echo_location_template.md`
+- `rcc/nexus/agent_handoff_contract.md`
+- `scripts/rcc/check_rcc_nexus.py`
+- `docs/context/drift/latest_rcc_nexus_report.json`
+- `docs/context/drift/latest_rcc_nexus_report.md`
+
+## Nexus Context Integrity
+
+Current NCI mode: `self`.
+
+NCI components:
+
+- completeness
+- link correctness
+- pattern rigidity
+- invariant compliance
+- evidence / validation linkage
+- drift freshness
+- coordinate completeness
+
+NCI is not code quality proof.
+
+## RCC Nexus Non-Claim Lock
+
+RCC-N improves navigation, traceability, and maintenance discipline. It does not prove code correctness, security, AI understanding, patch safety, production readiness, benchmark validity, or runtime truth.
+
+Geometry is not correctness.
+
+Navigation is not validation.
+
+Context is not truth.
+
+---
+
+## RCC-N v1.0 Local Integration
+
+AERMA-Memory now uses a Human/RCC Nexus/AI README trisection.
+
+- Human README: project purpose, usage, evidence boundary, roadmap.
+- RCC Nexus README: repository sphere, shell/meridian/sector coordinates, Echo Location, route maps, NCI, and geometric drift.
+- AI Agent README: required read order, patch protocol, validation commands, non-claim locks, and done criteria.
+
+This trisection is part of the RCC-N v1.0 local integration.
+
+## RCC Nexus Echo Location
+
+Sphere Position:
+- Shell: center
+- Meridian(s): source, agent, safety, release
+- Sector: rcc
+- Version / TTL: RCC-N-v1.0 / 180 days
+- Last Verified: 2026-05-14
+
+Local Role:
+- Root orientation surface for humans, RCC Nexus navigation, and AI agents.
+
+Inbound Hooks:
+- AGENTS.md
+- CLAUDE.md
+- GitHub repository URL
+
+Outbound Hooks:
+- docs/context/repository_context_index.json
+- docs/context/rcc_nexus_index.json
+- docs/context/validation_surface.md
+- rcc/nexus/route_map.json
+- docs/software_architecture/
+
+Evidence Surface:
+- docs/context/drift/latest_rcc_nexus_report.json
+- docs/context/drift/latest_rcc_nexus_report.md
+- runs/suite_*/aggregate_metrics.json
+- evidence_packages/
+
+Validation Surface:
+- pytest -q
+- python -m aerma.cli.main run-suite --suite .\tasks\suite_v1_2.json
+- python scripts/run_aerma_regression_guard.py
+- powershell -ExecutionPolicy Bypass -File .\scripts\rcc\check_rcc_drift.ps1
+- python scripts/rcc/check_rcc_nexus.py
+
+Claim Boundary:
+- README quality, RCC-N geometry, and NCI do not prove code correctness, security, patch safety, AI understanding, benchmark validity, or production readiness.
+
+Non-Claim Locks:
+- geometry_is_not_ai_internal_proof
+- nci_is_not_code_quality_proof
+- navigation_is_not_validation
+- context_reconstruction_is_not_correctness_proof
+- validation_remains_required
+
+Agent Route:
+- Read README.md, docs/context/repository_context_index.json, docs/context/rcc_nexus_index.json, rcc/nexus/route_map.json, then the target folder README before editing.
+
+Update Obligation:
+- Update README, RCC context, Nexus index, and route maps when project identity, validation commands, evidence paths, claim boundaries, or repository geometry changes.

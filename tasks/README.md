@@ -41,3 +41,44 @@ Run suite manifest:
     python -m aerma.cli.main run-suite --suite ".\tasks\suite_v1_2.json"
 
 <!-- RCC-MINI-README:END -->
+
+## RCC Nexus Echo Location
+
+Sphere Position:
+- Shell: middle
+- Meridian(s): validation, runtime, evidence
+- Sector: benchmark
+- Version / TTL: RCC-N-v1.0 / 180 days
+- Last Verified: 2026-05-14
+
+Local Role:
+- Stores benchmark task JSON and suite definitions.
+
+Inbound Hooks:
+- src/aerma/benchmarks/suite_runner.py
+
+Outbound Hooks:
+- runs/
+- evidence_packages/
+
+Evidence Surface:
+- runs/suite_*/aggregate_metrics.json
+
+Validation Surface:
+- python -m aerma.cli.main run-suite --suite .\tasks\suite_v1_2.json
+
+Claim Boundary:
+- Controlled tasks do not prove broad generalization.
+
+Non-Claim Locks:
+- geometry_is_not_ai_internal_proof
+- nci_is_not_code_quality_proof
+- navigation_is_not_validation
+- context_reconstruction_is_not_correctness_proof
+- validation_remains_required
+
+Agent Route:
+- Read this README before task or suite changes.
+
+Update Obligation:
+- Update when task families, suite composition, or validation expectations change.

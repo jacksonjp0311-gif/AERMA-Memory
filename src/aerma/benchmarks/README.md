@@ -45,3 +45,48 @@ Run full suite:
     python -m aerma.cli.main run-suite --suite ".\tasks\suite_v1_2.json"
 
 <!-- RCC-MINI-README:END -->
+
+## RCC Nexus Echo Location
+
+Sphere Position:
+- Shell: middle
+- Meridian(s): runtime, validation, evidence, safety
+- Sector: benchmark
+- Version / TTL: RCC-N-v1.0 / 180 days
+- Last Verified: 2026-05-14
+
+Local Role:
+- Runs benchmark tasks, scoring, classification, attribution, regression guard, and suite evidence surfaces.
+
+Inbound Hooks:
+- tasks/suite_v1_2.json
+- src/aerma/cli/main.py
+
+Outbound Hooks:
+- runs/
+- evidence_packages/
+- ledgers/aerma_suite_ledger.jsonl
+
+Evidence Surface:
+- runs/suite_*/aggregate_metrics.json
+- evidence_packages/*_evidence_package.json
+
+Validation Surface:
+- pytest -q
+- python -m aerma.cli.main run-suite --suite .\tasks\suite_v1_2.json
+
+Claim Boundary:
+- Suite score is controlled-suite evidence only.
+
+Non-Claim Locks:
+- geometry_is_not_ai_internal_proof
+- nci_is_not_code_quality_proof
+- navigation_is_not_validation
+- context_reconstruction_is_not_correctness_proof
+- validation_remains_required
+
+Agent Route:
+- Read this README before scoring, suite, or classifier changes.
+
+Update Obligation:
+- Update when benchmark hooks, metrics, or evidence surfaces change.

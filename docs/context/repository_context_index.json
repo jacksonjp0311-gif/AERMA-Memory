@@ -122,15 +122,17 @@
     "implementation_status": "planned_next_pass"
   },
   "rcc_nexus": {
-    "architecture_doc": "docs/software_architecture/rcc_nexus_software_architecture_v1_0.md",
-    "architecture_locked": true,
+    "checker": "scripts/rcc/check_rcc_nexus.py",
     "claim_boundary": "RCC-N improves navigation and context integrity; it does not prove correctness.",
-    "enabled": false,
-    "implementation_contract": "docs/software_architecture/rcc_nexus_implementation_contract_v1_0.md",
-    "implementation_status": "planned_next_pass",
-    "planned_checker": "scripts/rcc/check_rcc_nexus.py",
-    "planned_index": "docs/context/rcc_nexus_index.json",
-    "planned_nexus_root": "rcc/nexus/"
+    "enabled": true,
+    "implementation_status": "local_self_mode_active_repaired",
+    "index": "docs/context/rcc_nexus_index.json",
+    "last_repaired": "2026-05-14T15:34:34.899075+00:00",
+    "latest_report_json": "docs/context/drift/latest_rcc_nexus_report.json",
+    "latest_report_md": "docs/context/drift/latest_rcc_nexus_report.md",
+    "nci_mode": "self",
+    "nexus_root": "rcc/nexus/",
+    "route_map": "rcc/nexus/route_map.json"
   },
   "rci_weight_policy": {
     "declared": true,
@@ -149,11 +151,13 @@
     "architecture_last_updated": "2026-05-14T11:19:54.857069+00:00",
     "current_architecture_layer": "AERMA-RCC-ECHO-v0.1.2-architecture-lock",
     "current_nexus_architecture_layer": "RCC-N-v1.0-architecture-lock",
+    "current_nexus_layer": "RCC-N-v1.0-local-integration",
     "current_runtime_layer": "AERMA-Memory-v0.1.1-hardening",
     "declared_profile": "RCC-Core",
     "last_verified": "2026-05-13",
     "name": "AERMA-Memory",
     "nexus_architecture_last_updated": "2026-05-14T15:27:54.912634+00:00",
+    "nexus_last_updated": "2026-05-14T15:33:27.651945+00:00",
     "profile_claim_verified": false,
     "root": ".",
     "verification_mode": "manual"
@@ -189,6 +193,9 @@
     ],
     "install": [
       "python -m pip install -e \".[dev]\""
+    ],
+    "rcc_nexus": [
+      "python scripts/rcc/check_rcc_nexus.py"
     ],
     "rcc_nexus_architecture": [
       "pytest -q",

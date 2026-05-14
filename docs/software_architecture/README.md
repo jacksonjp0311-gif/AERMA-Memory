@@ -61,3 +61,46 @@ Primary files:
 Boundary:
 
 RCC-N improves repository navigation, agent self-location, Echo Location records, route maps, and Nexus Context Integrity. It does not prove code correctness, security, patch safety, model understanding, human memory, sentience, or production readiness.
+
+## RCC Nexus Echo Location
+
+Sphere Position:
+- Shell: outer
+- Meridian(s): source, agent, safety, release
+- Sector: rcc
+- Version / TTL: RCC-N-v1.0 / 180 days
+- Last Verified: 2026-05-14
+
+Local Role:
+- Holds locked software architecture documents and implementation contracts.
+
+Inbound Hooks:
+- README.md
+- docs/context/module_index.md
+
+Outbound Hooks:
+- docs/software_architecture/rcc_nexus_software_architecture_v1_0.md
+- docs/software_architecture/rcc_nexus_implementation_contract_v1_0.md
+
+Evidence Surface:
+- architecture documents
+
+Validation Surface:
+- pytest -q
+- python scripts/rcc/check_rcc_nexus.py
+
+Claim Boundary:
+- Architecture is not implementation proof.
+
+Non-Claim Locks:
+- geometry_is_not_ai_internal_proof
+- nci_is_not_code_quality_proof
+- navigation_is_not_validation
+- context_reconstruction_is_not_correctness_proof
+- validation_remains_required
+
+Agent Route:
+- Read architecture before implementing RCC-N surfaces.
+
+Update Obligation:
+- Update when architecture direction or implementation contract changes.
