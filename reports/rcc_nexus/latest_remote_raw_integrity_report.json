@@ -1,0 +1,42 @@
+{
+  "branch": "main",
+  "claim_boundary": "Remote raw integrity verifies public parseability after push; it does not prove runtime correctness.",
+  "repo": "jacksonjp0311-gif/AERMA-Memory",
+  "schema": "AERMA-remote-raw-integrity-v1",
+  "status": "pass",
+  "targets": [
+    {
+      "line_count": 642,
+      "max_line_length": 495,
+      "missing": [],
+      "name": "README",
+      "path": "README.md",
+      "status": "pass"
+    },
+    {
+      "line_count": 31,
+      "max_line_length": 293,
+      "missing": [],
+      "name": "Repo description doc",
+      "path": "docs/context/repo_description.md",
+      "status": "pass"
+    },
+    {
+      "line_count": 31,
+      "max_line_length": 195,
+      "missing": [],
+      "name": "RCC-N benchmark report",
+      "path": "reports/rcc_nexus/latest_rcc_nexus_benchmark.md",
+      "status": "pass"
+    },
+    {
+      "line_count": 26,
+      "max_line_length": 142,
+      "missing": [],
+      "name": "NCI chart",
+      "path": "visuals/rcc_nexus/nci_components.svg",
+      "status": "pass"
+    }
+  ],
+  "timestamp": "2026-05-14T16:06:38.972057+00:00"
+}
