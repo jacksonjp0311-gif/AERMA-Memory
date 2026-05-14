@@ -57,3 +57,16 @@ Passing the validation surface proves that the local reference scaffold installs
 The current `suite_score: 1.0` is produced on a small controlled task suite. Stronger evidence requires harder distractors, multiple queries per task, adversarial ambiguity, source collision, stale-memory conflict, and baseline delta reports.
 
 <!-- RCC-VALIDATION-SURFACE:END -->
+
+## Software Architecture Validation
+
+Architecture-only changes must preserve runtime behavior.
+
+Required validation after architecture changes:
+
+    pytest -q
+    python -m aerma.cli.main run-suite --suite ".\tasks\suite_v1_2.json"
+    python scripts/run_aerma_regression_guard.py
+    powershell -ExecutionPolicy Bypass -File ".\scripts\rcc\check_rcc_drift.ps1"
+
+Architecture documents are not runtime proof. They define implementation direction and validation expectations.

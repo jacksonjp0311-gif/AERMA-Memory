@@ -494,3 +494,13 @@ Priority order:
 This repository is strongest when claim boundaries stay visible. Do not optimize documentation to sound stronger than the evidence. Preserve the distinction between local controlled-suite evidence and broad validation, the diagnostic-only nature of drift and Ω, the non-claim boundaries around human memory and sentience, the regression-guard boundary, the attribution boundary, the evidence-package boundary, and the fact that RCC improves navigation rather than proving code correctness.
 
 <!-- RCC-AI-README:END -->
+
+## Software Architecture
+
+The current architecture lock for the next RCC layer is:
+
+- `docs/software_architecture/aerma_rcc_echo_location_architecture_v0_1_2.md`
+
+This document defines the planned AERMA-RCC-ECHO v0.1.2 Agentic Echo Location layer: root agent beacons, route maps, a modular `rcc/` folder, drift checks, reports, templates, schemas, and portability rules.
+
+The architecture is not runtime proof. It locks the intended design before implementation.

@@ -48,3 +48,12 @@ These RCC records are derived from the current scaffold and latest local run res
 The validation snapshot is local controlled-suite evidence only.
 
 <!-- RCC-CONTEXT:END -->
+
+## Software Architecture Surface
+
+| Module | Path | Role | Runtime claim sensitivity |
+|---|---|---|---|
+| Software architecture | `docs/software_architecture` | Locked architecture documents before major implementation changes | Medium |
+| RCC Echo Architecture | `docs/software_architecture/aerma_rcc_echo_location_architecture_v0_1_2.md` | Defines planned AGENTS.md, CLAUDE.md, `rcc/`, route maps, checks, reports, templates, and schemas | Medium |
+
+Architecture documents define intended structure and validation surfaces. They do not prove implementation correctness.
