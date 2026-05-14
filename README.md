@@ -6,17 +6,19 @@
 
 AERMA-Memory is best understood as a governed memory workbench:
 
-    source-bound episodes
-    -> cue-dependent retrieval
-    -> drift geometry
-    -> action gate
-    -> fallback / abstention
-    -> baseline comparison
-    -> repeat-run benchmark
-    -> attribution record
-    -> regression guard
-    -> evidence package
-    -> accepted / rejected memory-policy ledger
+```text
+source-bound episodes
+-> cue-dependent retrieval
+-> drift geometry
+-> action gate
+-> fallback / abstention
+-> baseline comparison
+-> repeat-run benchmark
+-> attribution record
+-> regression guard
+-> evidence package
+-> accepted / rejected memory-policy ledger
+```
 
 ---
 
@@ -62,27 +64,39 @@ Current local validation snapshot:
 
 Install editable package:
 
-    python -m pip install -e ".[dev]"
+```powershell
+python -m pip install -e ".[dev]"
+```
 
 Run tests:
 
-    pytest -q
+```powershell
+pytest -q
+```
 
 Run the controlled suite:
 
-    python -m aerma.cli.main run-suite --suite ".\tasks\suite_v1_2.json"
+```powershell
+python -m aerma.cli.main run-suite --suite ".\tasks\suite_v1_2.json"
+```
 
 Run the console script:
 
-    aerma run-suite --suite ".\tasks\suite_v1_2.json"
+```powershell
+aerma run-suite --suite ".\tasks\suite_v1_2.json"
+```
 
 View the current regression guard:
 
-    python scripts/run_aerma_regression_guard.py
+```powershell
+python scripts/run_aerma_regression_guard.py
+```
 
 Run the RCC drift check:
 
-    powershell -ExecutionPolicy Bypass -File ".\scripts\rcc\check_rcc_drift.ps1"
+```powershell
+powershell -ExecutionPolicy Bypass -File ".\scripts\rcc\check_rcc_drift.ps1"
+```
 
 ## What AERMA Tests
 
@@ -138,18 +152,20 @@ The current regression guard locks the local controlled-suite baseline:
 
 ## Project Structure
 
-    AERMA-Memory/
-    ├── src/aerma/              # Importable package
-    ├── scripts/                # Human-facing helper scripts
-    ├── tasks/                  # Benchmark task JSON files
-    ├── configs/                # Runtime, metric, baseline, and suite configs
-    ├── logs/                   # Runtime and phase logs
-    ├── runs/                   # Generated suite run outputs
-    ├── evidence_packages/      # Generated evidence packages
-    ├── ledgers/                # Runtime, suite, tool trace, and decision ledgers
-    ├── docs/                   # Theory, architecture, benchmark, evidence, RCC context
-    ├── memory/                 # Promoted invariants and rejected overclaims
-    └── tests/                  # Pytest suite
+```text
+AERMA-Memory/
+├── src/aerma/              # Importable package
+├── scripts/                # Human-facing helper scripts
+├── tasks/                  # Benchmark task JSON files
+├── configs/                # Runtime, metric, baseline, and suite configs
+├── logs/                   # Runtime and phase logs
+├── runs/                   # Generated suite run outputs
+├── evidence_packages/      # Generated evidence packages
+├── ledgers/                # Runtime, suite, tool trace, and decision ledgers
+├── docs/                   # Theory, architecture, benchmark, evidence, RCC context
+├── memory/                 # Promoted invariants and rejected overclaims
+└── tests/                  # Pytest suite
+```
 
 ## Main Folders
 
@@ -171,23 +187,33 @@ The current regression guard locks the local controlled-suite baseline:
 
 Suite runs produce outputs under:
 
-    runs/suite_*/
+```text
+runs/suite_*/
+```
 
 Suite evidence packages are written under:
 
-    evidence_packages/
+```text
+evidence_packages/
+```
 
 Suite ledgers are written under:
 
-    ledgers/aerma_suite_ledger.jsonl
+```text
+ledgers/aerma_suite_ledger.jsonl
+```
 
 Attribution records are written under:
 
-    logs/phase2/attribution/latest_aerma_attribution.json
+```text
+logs/phase2/attribution/latest_aerma_attribution.json
+```
 
 Regression guard records are written under:
 
-    logs/phase2/regression_guard/latest_aerma_regression_guard.json
+```text
+logs/phase2/regression_guard/latest_aerma_regression_guard.json
+```
 
 ## RCC / Repository Context Canon
 
@@ -307,6 +333,8 @@ Primary scripts:
 - `scripts/rcc/generate_rcc_context.py`
 - `scripts/rcc/harden_aerma_v0_1_1.py`
 - `scripts/rcc/sync_readmes_after_hardening.py`
+- `scripts/rcc/split_root_readme_human_ai.py`
+- `scripts/rcc/repair_root_readme_format.py`
 
 AI agents must update this section only when repository purpose, command surface, package structure, evidence artifacts, validation status, phase status, or claim boundaries change.
 
@@ -400,26 +428,34 @@ The next evidence step should be harder task-suite expansion, including source c
 
 After documentation-only RCC changes, run:
 
-    git diff -- README.md
-    git status
+```powershell
+git diff -- README.md
+git status
+```
 
 After README/RCC synchronization changes, run:
 
-    pytest -q
-    python -m aerma.cli.main run-suite --suite ".\tasks\suite_v1_2.json"
-    python scripts/run_aerma_regression_guard.py
-    powershell -ExecutionPolicy Bypass -File ".\scripts\rcc\check_rcc_drift.ps1"
+```powershell
+pytest -q
+python -m aerma.cli.main run-suite --suite ".\tasks\suite_v1_2.json"
+python scripts/run_aerma_regression_guard.py
+powershell -ExecutionPolicy Bypass -File ".\scripts\rcc\check_rcc_drift.ps1"
+```
 
 After source, scoring, benchmark, task, or evidence changes, run:
 
-    python -m pip install -e ".[dev]"
-    pytest -q
-    python -m aerma.cli.main run-suite --suite ".\tasks\suite_v1_2.json"
-    python scripts/run_aerma_regression_guard.py
+```powershell
+python -m pip install -e ".[dev]"
+pytest -q
+python -m aerma.cli.main run-suite --suite ".\tasks\suite_v1_2.json"
+python scripts/run_aerma_regression_guard.py
+```
 
 If the RCC context layer is changed, run:
 
-    powershell -ExecutionPolicy Bypass -File ".\scripts\rcc\check_rcc_drift.ps1"
+```powershell
+powershell -ExecutionPolicy Bypass -File ".\scripts\rcc\check_rcc_drift.ps1"
+```
 
 ## README maintenance rule
 
