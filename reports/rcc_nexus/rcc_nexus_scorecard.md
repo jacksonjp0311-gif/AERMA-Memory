@@ -1,6 +1,6 @@
 # RCC-N Scorecard
 
-Status: warn
+Status: pass
 
 NCI: 0.96
 
@@ -10,6 +10,6 @@ Route coverage: 1.000
 
 Coordinate coverage: 1.000
 
-README format health: 0.850
+README format health: 1.000
 
 Boundary: scorecard is diagnostic only, not correctness proof.

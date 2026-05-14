@@ -2,91 +2,34 @@
   "claim_boundary": "Markdown integrity improves public readability and agent navigation; it does not prove code correctness, security, patch safety, AI understanding, benchmark validity, or production readiness.",
   "health": [
     {
-      "findings": [
-        "aerma_typo",
-        "missing_rcc_nexus_part"
-      ],
-      "line_count": 575,
+      "findings": [],
+      "line_count": 577,
       "max_line_length": 495,
       "path": "README.md",
-      "status": "warn"
+      "status": "pass"
     },
     {
-      "findings": [
-        "aerma_typo",
-        "missing_rcc_nexus_part",
-        "missing_ai_part"
-      ],
+      "findings": [],
       "line_count": 27,
       "max_line_length": 197,
       "path": "reports/rcc_nexus/latest_validation_repair_report.md",
-      "status": "warn"
+      "status": "pass"
     },
     {
-      "findings": [
-        "missing_rcc_nexus_part",
-        "missing_ai_part"
-      ],
+      "findings": [],
       "line_count": 31,
       "max_line_length": 195,
       "path": "reports/rcc_nexus/latest_rcc_nexus_benchmark.md",
-      "status": "warn"
+      "status": "pass"
     },
     {
-      "findings": [
-        "missing_rcc_nexus_part",
-        "missing_ai_part"
-      ],
+      "findings": [],
       "line_count": 15,
       "max_line_length": 62,
       "path": "reports/rcc_nexus/rcc_nexus_scorecard.md",
-      "status": "warn"
+      "status": "pass"
     }
   ],
-  "repairs": [
-    {
-      "after_chars": 19186,
-      "after_lines": 575,
-      "before_chars": 19161,
-      "before_lines": 572,
-      "path": "README.md"
-    },
-    {
-      "after_chars": 630,
-      "after_lines": 27,
-      "before_chars": 629,
-      "before_lines": 27,
-      "path": "reports/rcc_nexus/latest_validation_repair_report.md"
-    },
-    {
-      "after_chars": 1100,
-      "after_lines": 43,
-      "before_chars": 1100,
-      "before_lines": 43,
-      "path": "reports/rcc_nexus/latest_github_public_polish_report.md"
-    },
-    {
-      "after_chars": 795,
-      "after_lines": 31,
-      "before_chars": 795,
-      "before_lines": 31,
-      "path": "reports/rcc_nexus/latest_rcc_nexus_benchmark.md"
-    },
-    {
-      "after_chars": 209,
-      "after_lines": 15,
-      "before_chars": 209,
-      "before_lines": 15,
-      "path": "reports/rcc_nexus/rcc_nexus_scorecard.md"
-    },
-    {
-      "after_chars": 315,
-      "after_lines": 15,
-      "before_chars": 315,
-      "before_lines": 15,
-      "path": "docs/context/drift/latest_rcc_nexus_report.md"
-    }
-  ],
-  "schema": "AERMA-public-markdown-integrity-v1",
-  "timestamp": "2026-05-14T15:56:33.455869+00:00"
+  "schema": "AERMA-public-markdown-integrity-v2",
+  "timestamp": "2026-05-14T15:59:06.769740+00:00"
 }

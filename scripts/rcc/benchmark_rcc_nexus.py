@@ -68,7 +68,7 @@ def non_claim_lock_coverage(index):
 def readme_format_health():
     text = read_text(ROOT / 'README.md')
     lines = text.splitlines()
-    bad_patterns = ['<!-\n-', '<!-\r\n-', '\n#\n# ', '\n1\n0.', '\n1\n1.', '\n1\n2.', '|\n---\n|']
+    bad_patterns = ['<!-\\n-', '<!-\\r\\n-', '\\n#\\n# ', '\\n1\\n0.', '\\n1\\n1.', '\\n1\\n2.', '|\\n---\\n|', '\\x07']
     failures = [pattern for pattern in bad_patterns if pattern in text]
     required = ['# PART I - Human README', '# PART II - RCC Nexus README', '# PART III - AI Agent README', '<!-- RCC-AI-README:START -->', '<!-- RCC-AI-README:END -->']
     missing = [item for item in required if item not in text]

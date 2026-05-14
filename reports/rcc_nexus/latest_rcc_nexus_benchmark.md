@@ -1,8 +1,8 @@
 # RCC-N Benchmark Report
 
-Timestamp: 2026-05-14T15:56:36.296474+00:00
+Timestamp: 2026-05-14T15:59:09.489631+00:00
 
-Status: warn
+Status: pass
 
 Computed NCI: 0.96
 
@@ -23,8 +23,8 @@ Computed NCI: 0.96
 | non_claim_locks_present | 5 |
 | non_claim_locks_total | 5 |
 | non_claim_lock_coverage | 1.000 |
-| readme_format_health | 0.850 |
-| rcc_nexus_finding_count | 1 |
+| readme_format_health | 1.000 |
+| rcc_nexus_finding_count | 0 |
 
 ## Boundary
 

@@ -30,11 +30,8 @@ def normalize_markdown(text: str) -> str:
     text = text.replace("\r\n", "\n").replace("\r", "\n")
     text = text.replace("\ufeff", "")
     text = text.replace("\x07erma", "aerma")
-    text = text.replace("erma", "aerma")
-    text = text.replace("verified erma import", "verified aerma import")
     text = text.replace("verified  erma import", "verified aerma import")
     text = text.replace("verified `erma` import", "verified `aerma` import")
-    text = text.replace("verified erma import", "verified aerma import")
     return text
 
 def force_lines_before_tokens(text: str) -> str:
@@ -188,7 +185,7 @@ def markdown_health(path: str, min_lines: int) -> dict:
         bad.append("line_count_below_minimum")
     if any(len(line) > 900 for line in lines):
         bad.append("very_long_line_over_900_chars")
-    if "verified erma import" in text or "erma" in text:
+    if "\x07" in text or "verified erma import" in text or "verified `erma` import" in text:
         bad.append("aerma_typo")
     if "# PART II - RCC Nexus README" not in text:
         bad.append("missing_rcc_nexus_part")
