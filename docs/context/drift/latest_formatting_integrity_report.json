@@ -1,0 +1,58 @@
+{
+  "checked_files": {
+    "README.md": {
+      "after_lines": 567,
+      "before_lines": 496,
+      "exists": true,
+      "minimum_expected_lines": 180,
+      "status": "pass"
+    },
+    "docs/context/drift_report.md": {
+      "after_lines": 44,
+      "before_lines": 38,
+      "exists": true,
+      "minimum_expected_lines": 25,
+      "status": "pass"
+    },
+    "docs/context/module_index.md": {
+      "after_lines": 103,
+      "before_lines": 59,
+      "exists": true,
+      "minimum_expected_lines": 25,
+      "status": "pass"
+    },
+    "docs/context/repository_context_index.json": {
+      "after_lines": 197,
+      "before_lines": 197,
+      "exists": true,
+      "minimum_expected_lines": 20,
+      "status": "pass"
+    },
+    "docs/context/validation_surface.md": {
+      "after_lines": 83,
+      "before_lines": 72,
+      "exists": true,
+      "minimum_expected_lines": 30,
+      "status": "pass"
+    },
+    "docs/software_architecture/README.md": {
+      "after_lines": 50,
+      "before_lines": 41,
+      "exists": true,
+      "minimum_expected_lines": 25,
+      "status": "pass"
+    },
+    "docs/software_architecture/aerma_rcc_echo_location_architecture_v0_1_2.md": {
+      "after_lines": 892,
+      "before_lines": 820,
+      "exists": true,
+      "minimum_expected_lines": 120,
+      "status": "pass"
+    }
+  },
+  "claim_boundary": "Formatting integrity improves readability and agent navigation; it does not prove runtime correctness.",
+  "schema": "AERMA-formatting-integrity-report-v1",
+  "status": "PASS",
+  "timestamp": "2026-05-14T11:24:47.633550+00:00",
+  "warnings": {}
+}

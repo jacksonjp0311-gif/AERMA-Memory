@@ -2,16 +2,19 @@
 
 Agentic Echo Location Field, Agent Entrypoint Beacons, Route Map, RCC Integrity Checks, Mini-README Contract, Handoff Protocol, Context Drift Reports, and Portable RCC Module Layer for AERMA-Memory.
 
-## Version
+#
+# Version
 
 v0.1.2 — Agentic Echo Location and RCC Integrity Layer · Locked · Root Agent Beacons, Claude/Codex Entrypoints, RCC Folder Contract, Agent Route Map, Echo Protocol, Task Routing Matrix, Handoff Contract, RCC Drift Linter, Required File Contract, Mini-README Template, Agent Templates, Schema Surfaces, Context Reports, and Portable RCC Module Boundary.
 
-## Author
+#
+# Author
 
 James Paul Jackson  
 X / Twitter: @unifiedenergy11
 
-## Source / Author Attribution
+#
+# Source / Author Attribution
 
 This document is a Codex-format software architecture derived from and aligned with:
 
@@ -24,15 +27,18 @@ This document is a Codex-format software architecture derived from and aligned w
 
 This architecture does not replace AERMA. It defines the RCC Echo Location layer that supports AERMA's safe evolution.
 
-## Date
+#
+# Date
 
 May 2026
 
-## Status
+#
+# Status
 
 CANONICAL v0.1.2 SOFTWARE ARCHITECTURE LOCK — ARCHITECTURE DOCUMENT · NOT FULLY IMPLEMENTED YET · NOT RUNTIME CAPABILITY CLAIM · NOT A CLAIM THAT RCC PROVES CODE CORRECTNESS · NOT A CLAIM THAT README QUALITY PROVES VALIDATION · NOT AGENT AUTONOMY · NOT SENTIENCE · NOT HUMAN MEMORY · NOT BIOLOGICAL MEMORY · NOT CLINICAL MEMORY · NOT UNIVERSAL AI MECHANISM.
 
-## Purpose
+#
+# Purpose
 
 Define the software architecture for a repo-local RCC Echo Location layer inside AERMA-Memory.
 
@@ -60,7 +66,8 @@ AERMA-RCC-ECHO v0.1.2 answers:
 - What reports should the RCC layer emit?
 - How can this layer later be copied into other repos?
 
-## What This Is
+#
+# What This Is
 
 - A software architecture for the AERMA-Memory RCC Echo Location layer.
 - A repo-local agent orientation and context-routing system.
@@ -73,7 +80,8 @@ AERMA-RCC-ECHO v0.1.2 answers:
 - A template and schema surface for future portability.
 - A bridge between AERMA-Memory and Agentic Echo Field Location.
 
-## What This Is Not
+#
+# What This Is Not
 
 - Not a separate repository inside AERMA-Memory.
 - Not a replacement for AERMA runtime code.
@@ -89,7 +97,8 @@ AERMA-RCC-ECHO v0.1.2 answers:
 - Not permission to treat documentation as validation.
 - Not permission to overclaim AERMA-B beyond the current controlled suite.
 
-## Core Extraction
+#
+# Core Extraction
 
 AERMA-RCC-ECHO v0.1.2 extracts the software invariant:
 
@@ -125,7 +134,8 @@ First report:
     rcc/reports/latest_rcc_drift_report.json
     rcc/reports/latest_rcc_drift_report.md
 
-## Canonical Lock v0.1.2
+#
+# Canonical Lock v0.1.2
 
 - RCC Echo Location supports AERMA; it does not replace AERMA.
 - RCC is a context and navigation layer, not correctness proof.
@@ -144,7 +154,8 @@ First report:
 - No semantic description may rewrite upstream metrics or evidence artifacts.
 - Evolutions must be additive unless a documented migration is explicitly declared.
 
-## RCC Echo Lock v0.1.2
+#
+# RCC Echo Lock v0.1.2
 
 AERMA-Memory must be agent-readable from the root:
 
@@ -158,7 +169,8 @@ AERMA-Memory must be agent-readable from the root:
 
 An agent must not modify runtime, scoring, tasks, evidence, or claims without reading the relevant local mini README and validation surface.
 
-## Agent Entrypoint Lock v0.1.2
+#
+# Agent Entrypoint Lock v0.1.2
 
 The repository must expose root beacons:
 
@@ -176,27 +188,33 @@ These beacons must declare:
 - done criteria,
 - RCC update obligations.
 
-## Software Non-Claim Lock v0.1.2
+#
+# Software Non-Claim Lock v0.1.2
 
 AERMA-RCC-ECHO measures and routes repository context. It does not prove code correctness, safety, agent understanding, intelligence, consciousness, truth, human memory, biological memory, clinical validity, or universal AI mechanism.
 
-## AI Prompt Traceability
+#
+# AI Prompt Traceability
 
 Use this document as the canonical AERMA-RCC-ECHO v0.1.2 architecture lock. Preserve AERMA's governed agentic memory purpose. Inject RCC Echo Location as a repo-local navigation and integrity layer. Preserve the distinction between documentation, source, tests, run artifacts, evidence packages, and public claims.
 
-## Shadow Header Alignment Seal
+#
+# Shadow Header Alignment Seal
 
 Preserve header discipline across future AERMA-RCC-ECHO versions except for explicitly additive refinements that improve agent entry, route-map accuracy, mini README coverage, RCC drift checks, reports, schemas, templates, validation alignment, portability, or public engineering clarity.
 
 ---
 
-## Abstract
+#
+# Abstract
 
 AERMA-RCC-ECHO v0.1.2 defines the software architecture for a repo-local Agentic Echo Location Field inside AERMA-Memory. The layer exposes root beacons, route maps, mini README contracts, validation surfaces, drift checks, context reports, templates, and schemas so humans and AI agents can rapidly orient inside the repository before modifying code or claims. The architecture is intentionally narrow: it improves context discovery, patch routing, validation discipline, and portability. It does not expand AERMA runtime capability, claim correctness, or prove agent understanding.
 
 ---
 
-## 1. Core-Invariant Extraction Block
+#
+# 
+1. Core-Invariant Extraction Block
 
 The shortest faithful extraction is:
 
@@ -224,7 +242,9 @@ If any term is missing, the edit is downgraded.
 
 ---
 
-## 2. Name and Public Identity
+#
+# 
+2. Name and Public Identity
 
 Layer name:
 
@@ -248,9 +268,12 @@ Internal Codex description:
 
 ---
 
-## 3. Source Lessons Injected
+#
+# 
+3. Source Lessons Injected
 
-### 3.1 AEFL Lesson: Location Before Action
+#
+## 3.1 AEFL Lesson: Location Before Action
 
 Agentic Echo Field Location teaches that an agent must locate itself inside a field before acting.
 
@@ -258,7 +281,8 @@ AERMA imports this as:
 
     no patch before route.
 
-### 3.2 RCC Lesson: Context Is Operational
+#
+## 3.2 RCC Lesson: Context Is Operational
 
 RCC teaches that README surfaces and mini READMEs are not decorative; they are operational navigation surfaces.
 
@@ -266,7 +290,8 @@ AERMA imports this as:
 
     README and mini README are agent orientation interfaces.
 
-### 3.3 AERMA Lesson: Evidence Before Claim
+#
+## 3.3 AERMA Lesson: Evidence Before Claim
 
 AERMA teaches that memory-like behavior must be tested through recall, fallback, abstention, attribution, regression guard, and evidence package.
 
@@ -274,7 +299,8 @@ RCC Echo imports this as:
 
     no context claim without validation surface and evidence path.
 
-### 3.4 Codex Workflow Lesson: Continuity Matters
+#
+## 3.4 Codex Workflow Lesson: Continuity Matters
 
 Codex workflow teaches local anchoring, testing, ledgers, and push verification.
 
@@ -284,7 +310,9 @@ RCC Echo imports this as:
 
 ---
 
-## 4. System Definition
+#
+# 
+4. System Definition
 
 AERMA-RCC-ECHO is:
 
@@ -314,18 +342,22 @@ Expanded:
 
 ---
 
-## 5. Agentic Echo Location Field
+#
+# 
+5. Agentic Echo Location Field
 
 The echo field has five layers:
 
-### Layer 1: Root Beacons
+#
+## Layer 1: Root Beacons
 
     AGENTS.md
     CLAUDE.md
 
 These files orient agents immediately.
 
-### Layer 2: Global Maps
+#
+## Layer 2: Global Maps
 
     README.md
     docs/context/repository_context_index.json
@@ -334,20 +366,23 @@ These files orient agents immediately.
 
 These files describe identity, modules, commands, and claims.
 
-### Layer 3: Route Maps
+#
+## Layer 3: Route Maps
 
     rcc/echo/agent_route_map.json
     rcc/echo/task_routing_matrix.md
 
 These files map task types to folders, files, and validations.
 
-### Layer 4: Local Echo Points
+#
+## Layer 4: Local Echo Points
 
     folder-level README.md files
 
 These files explain local purpose, hooks, artifacts, theory, invariants, and examples.
 
-### Layer 5: Sensors and Reports
+#
+## Layer 5: Sensors and Reports
 
     rcc/checks/check_rcc_drift.py
     rcc/reports/latest_rcc_drift_report.*
@@ -356,7 +391,9 @@ These files detect drift and summarize RCC health.
 
 ---
 
-## 6. Repository Architecture
+#
+# 
+6. Repository Architecture
 
 The intended RCC Echo structure is:
 
@@ -418,9 +455,12 @@ The `scripts/rcc/check_rcc_drift.ps1` file remains as a compatibility wrapper af
 
 ---
 
-## 7. Root Beacon Contract
+#
+# 
+7. Root Beacon Contract
 
-### AGENTS.md
+#
+## AGENTS.md
 
 Must declare:
 
@@ -431,7 +471,8 @@ Must declare:
 - non-claim locks,
 - done criteria.
 
-### CLAUDE.md
+#
+## CLAUDE.md
 
 Must declare:
 
@@ -446,7 +487,9 @@ These files are not substitutes for README or source inspection. They are beacon
 
 ---
 
-## 8. RCC Folder Contract
+#
+# 
+8. RCC Folder Contract
 
 The `rcc/` folder is a repo-local module with five responsibilities:
 
@@ -460,7 +503,9 @@ The `rcc/` folder must not contain AERMA runtime code. It governs context and na
 
 ---
 
-## 9. Agent Route Map Contract
+#
+# 
+9. Agent Route Map Contract
 
 The route map must be machine-readable JSON.
 
@@ -494,7 +539,9 @@ A route is valid only if it tells an agent:
 
 ---
 
-## 10. RCC Drift Check Contract
+#
+# 
+10. RCC Drift Check Contract
 
 The first real checker must validate:
 
@@ -525,7 +572,9 @@ Output:
 
 ---
 
-## 11. Mini README Contract
+#
+# 
+11. Mini README Contract
 
 Major folders must expose S/H/A/T/I/E:
 
@@ -541,7 +590,9 @@ The mini README is the local echo point. It tells an agent why the folder exists
 
 ---
 
-## 12. Handoff Contract
+#
+# 
+12. Handoff Contract
 
 Every agent handoff should be able to report:
 
@@ -563,7 +614,9 @@ Future implementation may emit a handoff JSON.
 
 ---
 
-## 13. Validation Surface
+#
+# 
+13. Validation Surface
 
 After architecture-only changes:
 
@@ -582,7 +635,9 @@ After RCC Echo implementation:
 
 ---
 
-## 14. Evidence and Reports
+#
+# 
+14. Evidence and Reports
 
 RCC Echo reports are context-integrity artifacts, not runtime evidence.
 
@@ -611,7 +666,9 @@ Report boundary:
 
 ---
 
-## 15. Portability Contract
+#
+# 
+15. Portability Contract
 
 The RCC Echo layer should be portable to other repos.
 
@@ -641,7 +698,9 @@ Portability rule:
 
 ---
 
-## 16. Falsification Surface
+#
+# 
+16. Falsification Surface
 
 AERMA-RCC-ECHO is weakened or rejected if:
 
@@ -671,16 +730,20 @@ Correct boundary:
 
 ---
 
-## 17. Implementation Roadmap
+#
+# 
+17. Implementation Roadmap
 
-### v0.1.2 Architecture Lock
+#
+## v0.1.2 Architecture Lock
 
 - Create `docs/software_architecture/`.
 - Add this architecture document.
 - Reference it from README and docs/context.
 - Validate current runtime unchanged.
 
-### v0.1.2 Implementation
+#
+## v0.1.2 Implementation
 
 - Add AGENTS.md.
 - Add CLAUDE.md.
@@ -690,7 +753,8 @@ Correct boundary:
 - Upgrade script compatibility wrapper.
 - Run full validation.
 
-### v0.1.3 RCC Drift Linter
+#
+## v0.1.3 RCC Drift Linter
 
 - Add stronger stale-command checks.
 - Add README validation snapshot checks.
@@ -698,20 +762,24 @@ Correct boundary:
 - Add non-claim phrase checks.
 - Add JSON report scoring.
 
-### v0.1.4 Portable RCC Injector
+#
+## v0.1.4 Portable RCC Injector
 
 - Add script to inject RCC Echo into another repo.
 - Add template substitution.
 - Add route-map generation.
 - Add required-files generation.
 
-### v0.2.0 Expanded AERMA Benchmark Suite
+#
+## v0.2.0 Expanded AERMA Benchmark Suite
 
 - Add harder memory tasks after RCC Echo is stable.
 
 ---
 
-## 18. System Diagram
+#
+# 
+18. System Diagram
 
     Repo URL
        |
@@ -752,7 +820,9 @@ Side locks:
 
 ---
 
-## 19. Public Framing
+#
+# 
+19. Public Framing
 
 Internal Codex framing:
 
@@ -772,7 +842,9 @@ Short description:
 
 ---
 
-## 20. Concluding Compression
+#
+# 
+20. Concluding Compression
 
 AERMA-RCC-ECHO v0.1.2 names the repo-local Agentic Echo Location layer for AERMA-Memory.
 

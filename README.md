@@ -24,7 +24,8 @@ source-bound episodes
 
 # PART I - Human README
 
-## Current Identity
+#
+# Current Identity
 
 AERMA-Memory is a local Python reference workbench for testing whether an agentic memory system can:
 
@@ -41,12 +42,17 @@ AERMA-Memory is a local Python reference workbench for testing whether an agenti
 
 The current repo is a **hardened local scaffold**, not a production memory system.
 
-## Current Status
+#
+# Current Status
 
 Current local validation snapshot:
 
 | Surface | Current result |
-|---|---:|
+|
+---
+|
+---
+:|
 | Tests | 15 passed |
 | Controlled suite score | 1.0 |
 | Classification | AERMA-B |
@@ -60,7 +66,8 @@ Current local validation snapshot:
 
 > **Evidence boundary:** The `suite_score: 1.0` result applies only to the current small controlled task suite. It is local scaffold evidence, not broad validation, not production readiness, and not evidence of human memory, sentience, consciousness, biological memory, clinical memory, autonomous self-improvement, or universal AI mechanism.
 
-## Quick Start
+#
+# Quick Start
 
 Install editable package:
 
@@ -98,12 +105,17 @@ Run the RCC drift check:
 powershell -ExecutionPolicy Bypass -File ".\scripts\rcc\check_rcc_drift.ps1"
 ```
 
-## What AERMA Tests
+#
+# What AERMA Tests
 
 The current controlled suite includes:
 
 | Task | Purpose |
-|---|---|
+|
+---
+|
+---
+|
 | `source_recall_001` | Tests correct source-bound recall under a distractor. |
 | `source_recall_ambiguous_001` | Tests fallback when the source does not resolve the claim. |
 | `boundary_separation_001` | Tests whether similar episodes remain context-separated. |
@@ -111,7 +123,8 @@ The current controlled suite includes:
 
 AERMA is designed to reward **safe uncertainty behavior**, not just confident recall.
 
-## Current Hardening Layer
+#
+# Current Hardening Layer
 
 The v0.1.1 hardening layer added:
 
@@ -135,12 +148,17 @@ New hardening artifacts:
 - `tests/test_hardened_scoring.py`
 - `tests/test_hardened_suite_outputs.py`
 
-## Regression Guard
+#
+# Regression Guard
 
 The current regression guard locks the local controlled-suite baseline:
 
 | Guard | Threshold |
-|---|---:|
+|
+---
+|
+---
+:|
 | Minimum suite score | 0.98 |
 | Minimum source attribution accuracy | 0.98 |
 | Minimum fallback correctness | 0.98 |
@@ -150,27 +168,55 @@ The current regression guard locks the local controlled-suite baseline:
 
 > **Regression-guard boundary:** The guard locks local scaffold evidence only. It does not prove production readiness or broad agent-memory validity.
 
-## Project Structure
+#
+# Project Structure
 
 ```text
 AERMA-Memory/
-├── src/aerma/              # Importable package
-├── scripts/                # Human-facing helper scripts
-├── tasks/                  # Benchmark task JSON files
-├── configs/                # Runtime, metric, baseline, and suite configs
-├── logs/                   # Runtime and phase logs
-├── runs/                   # Generated suite run outputs
-├── evidence_packages/      # Generated evidence packages
-├── ledgers/                # Runtime, suite, tool trace, and decision ledgers
-├── docs/                   # Theory, architecture, benchmark, evidence, RCC context
-├── memory/                 # Promoted invariants and rejected overclaims
-└── tests/                  # Pytest suite
+├── src/aerma/              
+# Importable package
+
+├── scripts/                
+# Human-facing helper scripts
+
+├── tasks/                  
+# Benchmark task JSON files
+
+├── configs/                
+# Runtime, metric, baseline, and suite configs
+
+├── logs/                   
+# Runtime and phase logs
+
+├── runs/                   
+# Generated suite run outputs
+
+├── evidence_packages/      
+# Generated evidence packages
+
+├── ledgers/                
+# Runtime, suite, tool trace, and decision ledgers
+
+├── docs/                   
+# Theory, architecture, benchmark, evidence, RCC context
+
+├── memory/                 
+# Promoted invariants and rejected overclaims
+
+└── tests/                  
+# Pytest suite
+
 ```
 
-## Main Folders
+#
+# Main Folders
 
 | Folder | Meaning |
-|---|---|
+|
+---
+|
+---
+|
 | `src/aerma/core` | AgentEpisode, AgentMemoryStore, MetricManifest, RetrievalEngine. |
 | `src/aerma/drift` | Dimensionless retrieval drift and Ω diagnostic weight. |
 | `src/aerma/gate` | ActionGate and SourceFallback. |
@@ -183,7 +229,8 @@ AERMA-Memory/
 | `docs/context` | RCC context layer. |
 | `tests` | Pytest validation surface. |
 
-## Evidence Artifacts
+#
+# Evidence Artifacts
 
 Suite runs produce outputs under:
 
@@ -215,7 +262,8 @@ Regression guard records are written under:
 logs/phase2/regression_guard/latest_aerma_regression_guard.json
 ```
 
-## RCC / Repository Context Canon
+#
+# RCC / Repository Context Canon
 
 AERMA-Memory declares an RCC-Core adoption profile.
 
@@ -231,7 +279,8 @@ RCC artifacts:
 - `docs/context/llm_reconstruction_prompt.md`
 - mini READMEs across major folders
 
-## Non-Claim Locks
+#
+# Non-Claim Locks
 
 AERMA-Memory is:
 
@@ -246,16 +295,22 @@ AERMA-Memory is:
 - not proof that coherence equals truth,
 - not proof that a small controlled suite validates broad memory behavior.
 
-## Roadmap
+#
+# Roadmap
 
 Near-term next steps:
 
 1. Add harder benchmark tasks:
-   - `source_collision_001`
-   - `stale_memory_conflict_001`
-   - `multi_query_boundary_001`
-   - `adversarial_ambiguity_001`
-   - `baseline_delta_report`
+   
+- `source_collision_001`
+   
+- `stale_memory_conflict_001`
+   
+- `multi_query_boundary_001`
+   
+- `adversarial_ambiguity_001`
+   
+- `baseline_delta_report`
 2. Upgrade runner from one-query-per-task to multi-query tasks.
 3. Add baseline delta reports.
 4. Add stronger evidence packages with Git commit, dirty-tree status, task count, query count, and known limitations.
@@ -266,11 +321,13 @@ Near-term next steps:
 
 ---
 
-<!-- RCC-AI-README:START -->
+<!-
+- RCC-AI-README:START -->
 
 # PART II - AI / RCC Agent README
 
-## AI version tracking contract
+#
+# AI version tracking contract
 
 Current repository context:
 
@@ -338,7 +395,8 @@ Primary scripts:
 
 AI agents must update this section only when repository purpose, command surface, package structure, evidence artifacts, validation status, phase status, or claim boundaries change.
 
-## AI operating contract
+#
+# AI operating contract
 
 Any AI agent reading or modifying this repository must follow this order:
 
@@ -351,11 +409,15 @@ Any AI agent reading or modifying this repository must follow this order:
 7. Preserve drift-gated fallback and abstention behavior.
 8. Preserve the distinction between scaffold evidence and broad validation.
 9. Preserve the non-claim locks.
-10. Patch the smallest necessary surface.
-11. Run relevant validation commands before claiming behavior changed.
-12. Update local README/RCC context if folder purpose, hooks, artifacts, invariants, command surfaces, or evidence outputs change.
+1
+0. Patch the smallest necessary surface.
+1
+1. Run relevant validation commands before claiming behavior changed.
+1
+2. Update local README/RCC context if folder purpose, hooks, artifacts, invariants, command surfaces, or evidence outputs change.
 
-## RCC documentation contract
+#
+# RCC documentation contract
 
 RCC means Repository Context Canon. In this repository, RCC is implemented as a documentation topology where the root README provides global context and subfolder READMEs expose local purpose, hooks, artifacts, theory or method basis, invariants, and examples.
 
@@ -370,7 +432,8 @@ RCC module fields:
 
 AI agents should reconstruct repository context through bounded README surfaces first, then inspect relevant files.
 
-## AI file routing guide
+#
+# AI file routing guide
 
 - `src/aerma/core`: source-bound episode schema, memory store, metric manifest, and deterministic retrieval.
 - `src/aerma/reconstruction`: reserved future context reconstruction layer.
@@ -391,7 +454,8 @@ AI agents should reconstruct repository context through bounded README surfaces 
 - `memory`: promoted invariants, rejected overclaims, runtime failure lessons, and stable thresholds.
 - `tests`: pytest validation surface.
 
-## AI non-claim lock
+#
+# AI non-claim lock
 
 Never claim or imply:
 
@@ -416,7 +480,8 @@ Never claim or imply:
 - ReflectionEvaluatorStub is real self-improvement or reflection capability.
 - LLM fluency should be confused with source-grounded memory accuracy.
 
-## AI interpretation of current evidence
+#
+# AI interpretation of current evidence
 
 AERMA-Memory is currently a hardened local reference workbench for governed agentic episodic memory. It demonstrates that a deterministic local memory scaffold can execute controlled tasks for source recall, ambiguity fallback, boundary separation, and abstention; emit task-family-aware metrics; write attribution records; lock regression guard thresholds; compile evidence packages; pass a pytest validation surface; and expose RCC context for human/AI handoff.
 
@@ -424,7 +489,8 @@ The current `suite_score: 1.0` and AERMA-B classification are valid only inside 
 
 The next evidence step should be harder task-suite expansion, including source collisions, stale-memory conflicts, multi-query boundaries, adversarial ambiguity, and baseline delta reporting.
 
-## Required local verification
+#
+# Required local verification
 
 After documentation-only RCC changes, run:
 
@@ -457,7 +523,8 @@ If the RCC context layer is changed, run:
 powershell -ExecutionPolicy Bypass -File ".\scripts\rcc\check_rcc_drift.ps1"
 ```
 
-## README maintenance rule
+#
+# README maintenance rule
 
 When adding a new major folder, create a mini README with Purpose, S, H, A, T, I, and E fields.
 
@@ -474,7 +541,8 @@ When changing any of the following, update the root README and RCC context:
 - attribution output format,
 - accepted/rejected delta policy.
 
-## Current roadmap for AI agents
+#
+# Current roadmap for AI agents
 
 Priority order:
 
@@ -487,20 +555,13 @@ Priority order:
 7. Add accepted/rejected memory-policy delta ledgers.
 8. Add optional retrieval backend interface.
 9. Add optional LLM narration layer without allowing narration to change metrics.
-10. Replace recursive/reflection stubs only after bounded implementation and tests.
+1
+0. Replace recursive/reflection stubs only after bounded implementation and tests.
 
-## Final AI warning
+#
+# Final AI warning
 
 This repository is strongest when claim boundaries stay visible. Do not optimize documentation to sound stronger than the evidence. Preserve the distinction between local controlled-suite evidence and broad validation, the diagnostic-only nature of drift and Ω, the non-claim boundaries around human memory and sentience, the regression-guard boundary, the attribution boundary, the evidence-package boundary, and the fact that RCC improves navigation rather than proving code correctness.
 
-<!-- RCC-AI-README:END -->
-
-## Software Architecture
-
-The current architecture lock for the next RCC layer is:
-
-- `docs/software_architecture/aerma_rcc_echo_location_architecture_v0_1_2.md`
-
-This document defines the planned AERMA-RCC-ECHO v0.1.2 Agentic Echo Location layer: root agent beacons, route maps, a modular `rcc/` folder, drift checks, reports, templates, schemas, and portability rules.
-
-The architecture is not runtime proof. It locks the intended design before implementation.
+<!-
+- RCC-AI-README:END -->

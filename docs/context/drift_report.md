@@ -1,19 +1,23 @@
 # AERMA-Memory RCC Drift Report
 
-<!-- RCC-DRIFT-REPORT:START -->
+<!-
+- RCC-DRIFT-REPORT:START -->
 
-## Current drift status
+#
+# Current drift status
 
 Manual review required, but v0.1.1 hardening reduces known scoring drift.
 
-## Current known context state
+#
+# Current known context state
 
 - RCC has been inserted after successful local runs.
 - Mini READMEs are generated from current repository structure and intended AERMA v1.2-MVP behavior.
 - Runtime code remains source of truth.
 - v0.1.1 hardening adds task-family-aware scoring, per-task attribution logs, and a regression guard baseline.
 
-## Known drift surfaces
+#
+# Known drift surfaces
 
 - Current attribution logs are deterministic scaffold attribution, not model-quality proof.
 - Regression guard is a local baseline lock, not independent validation.
@@ -21,7 +25,8 @@ Manual review required, but v0.1.1 hardening reduces known scoring drift.
 - Evidence dashboards are placeholders.
 - RecursiveExecutor and ReflectionEvaluator remain stubs.
 
-## Required update triggers
+#
+# Required update triggers
 
 Update RCC records when:
 
@@ -35,4 +40,5 @@ Update RCC records when:
 - recursive/reflection stubs become real implementations,
 - README claims change.
 
-<!-- RCC-DRIFT-REPORT:END -->
+<!-
+- RCC-DRIFT-REPORT:END -->
