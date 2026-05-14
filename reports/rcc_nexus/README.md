@@ -40,3 +40,18 @@ Run:
     python scripts/rcc/benchmark_rcc_nexus.py
 
 <!-- RCC-MINI-README:END -->
+
+## Remote Raw Integrity
+
+Remote raw integrity checks verify that public GitHub raw files remain parseable after push.
+
+Run:
+
+    python scripts/rcc/verify_remote_raw_integrity.py
+
+Outputs:
+
+- `latest_remote_raw_integrity_report.json`
+- `latest_remote_raw_integrity_report.md`
+
+Boundary: remote raw integrity checks public readability and parseability only.

@@ -1,5 +1,17 @@
 # AERMA-Memory: Governed Agentic Episodic Memory Workbench
 
+## Repository Description
+
+Governed agentic episodic memory workbench with RCC-N repo-context navigation, source-bound recall, fallback/abstention benchmarks, evidence packages, and regression guards.
+
+This repo combines two layers:
+
+1. AERMA runtime: source-bound episodic recall, ambiguity fallback, abstention, boundary separation, baseline comparison, regression guard, and evidence packages.
+2. RCC-N navigation: Human Director Box, README trisection, repository sphere, route maps, Echo Location records, Nexus reports, charts, and public Markdown integrity checks.
+
+Boundary: this description improves discoverability. It does not prove code correctness, security, patch safety, AI understanding, benchmark validity, production readiness, sentience, consciousness, or human memory.
+
+
 > AERMA-Memory is a local-first reference implementation and benchmark workbench for governed agentic episodic memory. It tests source-bound recall, ambiguity fallback, boundary separation, abstention, baseline comparison, repeat-run evidence, RCC context, RCC-N repository navigation, attribution records, regression guards, and audit-ready evidence packages.
 
 Important boundary: this is not a claim of sentience, consciousness, human episodic memory, biological memory, clinical memory, autonomous self-improvement, production-ready agent memory, or a universal AI mechanism.
@@ -166,40 +178,93 @@ Regression-guard boundary: the guard locks local scaffold evidence only. It does
 
 ## Project Structure
 
+AERMA-Memory is organized as a runtime workbench plus a repository-navigation shell.
+
     AERMA-Memory/
-    ├── AGENTS.md
-    ├── CLAUDE.md
-    ├── configs/
-    ├── docs/
-    ├── evidence_packages/
-    ├── ledgers/
-    ├── logs/
-    ├── memory/
-    ├── rcc/nexus/
-    ├── reports/rcc_nexus/
-    ├── runs/
-    ├── scripts/
-    ├── src/
-    ├── tasks/
-    ├── tests/
-    └── visuals/rcc_nexus/
+    ├── AGENTS.md                         # Agent entry beacon and operating contract
+    ├── CLAUDE.md                         # Claude-specific repo memory and patch rules
+    ├── configs/                          # Runtime, metric, baseline, and suite configuration
+    │   ├── runtime_config.json            # Runtime defaults
+    │   ├── metric_manifest.json           # Declared metrics and threshold surfaces
+    │   ├── baseline_config.json           # Baseline selection/configuration
+    │   └── suite_config.json              # Suite execution settings
+    ├── docs/                             # Theory, architecture, evidence, and RCC context
+    │   ├── context/                       # RCC indexes, validation surfaces, drift reports
+    │   ├── software_architecture/         # AERMA/RCC/RCC-N architecture locks
+    │   ├── benchmark_protocol/            # Benchmark method and task protocols
+    │   └── evidence/                      # Evidence-package and ledger contracts
+    ├── evidence_packages/                 # Generated evidence packages from suite runs
+    ├── ledgers/                           # JSONL continuity, suite, decision, and trace ledgers
+    ├── logs/                              # Attribution, regression guard, and phase logs
+    ├── memory/                            # Promoted invariants, rejected claims, failure lessons
+    ├── rcc/nexus/                         # RCC-N route maps, protocol, Echo template, handoff
+    ├── reports/rcc_nexus/                 # RCC-N benchmark reports, scorecards, metrics history
+    ├── runs/                              # Generated suite run outputs
+    ├── scripts/                           # Human-facing helper, RCC, validation, and report scripts
+    │   └── rcc/                           # RCC/RCC-N checkers, benchmarks, charts, repair scripts
+    ├── src/                               # Importable Python package
+    │   └── aerma/                         # AERMA runtime package
+    │       ├── agent/                     # Recursive/reflection stubs only
+    │       ├── benchmarks/                # Suite runner, baselines, scoring, classifier
+    │       ├── cli/                       # Command-line entry points
+    │       ├── core/                      # Episodes, memory store, metric manifest, retrieval
+    │       ├── drift/                     # Retrieval drift and Omega diagnostics
+    │       ├── evidence/                  # Ledger and evidence package compiler
+    │       └── gate/                      # ActionGate and SourceFallback
+    ├── tasks/                             # Controlled benchmark task JSON and suite manifest
+    ├── tests/                             # Pytest implementation-health validation
+    └── visuals/rcc_nexus/                 # RCC-N charts and visual diagnostics
 
-## Main Folders
+## Project Structure Director
 
-| Folder | Meaning |
-|---|---|
-| `src/aaerma/core` | AgentEpisode, AgentMemoryStore, MetricManifest, RetrievalEngine. |
-| `src/aaerma/drift` | Dimensionless retrieval drift and Omega diagnostic weight. |
-| `src/aaerma/gate` | ActionGate and SourceFallback. |
-| `src/aaerma/benchmarks` | BenchmarkRunner, SuiteRunner, baselines, scoring, classifier. |
-| `src/aaerma/evidence` | RuntimeLedger and EvidencePackageCompiler. |
-| `src/aaerma/agent` | RecursiveExecutorStub and ReflectionEvaluatorStub. |
-| `tasks` | Controlled benchmark tasks. |
-| `docs/context` | RCC context layer and Nexus index. |
-| `rcc/nexus` | RCC-N route maps, protocol, handoff, and Echo Location template. |
-| `reports/rcc_nexus` | Human-readable RCC-N benchmark reports. |
-| `visuals/rcc_nexus` | RCC-N charts and visual diagnostics. |
-| `tests` | Pytest validation surface. |
+| Surface | What it does | Why it matters |
+|---|---|---|
+| `AGENTS.md` | Gives coding agents the entry order, route rules, and validation requirements. | Prevents blind patching. |
+| `CLAUDE.md` | Gives Claude-specific instructions for preserving formatting, claims, and validation. | Keeps model-specific behavior aligned. |
+| `configs/` | Stores runtime, metric, baseline, and suite configuration. | Makes benchmark behavior inspectable. |
+| `docs/context/` | Stores RCC context index, validation surface, context budget, drift reports, and RCC-N index. | Main source of repository self-description. |
+| `docs/software_architecture/` | Stores locked software architecture and implementation contracts. | Keeps theory-to-software direction explicit. |
+| `evidence_packages/` | Stores generated evidence packages from suite runs. | Links claims to task outputs and artifacts. |
+| `ledgers/` | Stores append-style JSONL continuity records. | Preserves run and decision history. |
+| `logs/` | Stores attribution and regression-guard outputs. | Supports audit and regression review. |
+| `memory/` | Stores promoted invariants and rejected overclaims. | Keeps memory promotion bounded. |
+| `rcc/nexus/` | Stores RCC-N route maps, task matrix, protocol, Echo template, and handoff contract. | Makes the repo agent-navigable. |
+| `reports/rcc_nexus/` | Stores RCC-N benchmark reports, scorecards, public polish reports, and metrics history. | Turns RCC-N into a measured surface. |
+| `runs/` | Stores generated suite run outputs. | Keeps benchmark output reproducible. |
+| `scripts/` | Stores helper scripts for running, checking, repairing, reporting, and charting. | Provides human/agent command surfaces. |
+| `scripts/rcc/` | Stores RCC/RCC-N checkers, benchmark scripts, chart generators, and repair scripts. | Enforces repository-context integrity. |
+| `src/aerma/` | Stores the importable runtime package. | Contains actual AERMA implementation code. |
+| `src/aerma/core/` | Defines AgentEpisode, memory store, metric manifest, and retrieval primitives. | Core source-bound memory mechanics. |
+| `src/aerma/drift/` | Computes retrieval drift and Omega diagnostic weight. | Supports bounded uncertainty and gate decisions. |
+| `src/aerma/gate/` | Implements ActionGate and SourceFallback. | Prevents high-drift or ambiguous returns as fact. |
+| `src/aerma/benchmarks/` | Runs benchmark tasks, baselines, scoring, classification, attribution, and regression guard. | Produces the controlled evidence surface. |
+| `src/aerma/evidence/` | Compiles ledgers and evidence packages. | Connects runtime claims to artifacts. |
+| `src/aerma/agent/` | Contains RecursiveExecutorStub and ReflectionEvaluatorStub. | Preserves future interface without overclaiming recursion. |
+| `tasks/` | Stores benchmark task definitions. | Defines what the suite actually tests. |
+| `tests/` | Stores pytest implementation-health checks. | Catches regressions in local scaffold behavior. |
+| `visuals/rcc_nexus/` | Stores NCI and RCC-N coverage/trend charts. | Helps humans inspect navigation health quickly. |
+
+## Structure Reading Route
+
+For humans:
+
+1. Read the Human Director Box.
+2. Read Project Structure Director.
+3. Open `reports/rcc_nexus/latest_rcc_nexus_benchmark.md`.
+4. Open `docs/context/rcc_nexus_index.json`.
+
+For AI agents:
+
+1. Read `AGENTS.md`.
+2. Read `README.md`.
+3. Read `docs/context/repository_context_index.json`.
+4. Read `docs/context/rcc_nexus_index.json`.
+5. Read `rcc/nexus/route_map.json`.
+6. Read the target folder README.
+7. Inspect source/tests/evidence before patching.
+8. Run declared validation.
+
+Structure boundary: project structure improves navigation. It does not prove correctness, security, patch safety, AI understanding, benchmark validity, production readiness, sentience, consciousness, or human memory.
 
 ## Evidence Artifacts
 

@@ -164,13 +164,29 @@
     "current_nexus_layer": "RCC-N-v1.0-human-director-analytics",
     "current_runtime_layer": "AERMA-Memory-v0.1.1-hardening",
     "declared_profile": "RCC-Core",
+    "description": "Governed agentic episodic memory workbench with RCC-N repo-context navigation, source-bound recall, fallback/abstention benchmarks, evidence packages, and regression guards.",
+    "last_structure_director_update": "2026-05-14T16:06:30.051889+00:00",
     "last_verified": "2026-05-13",
     "name": "AERMA-Memory",
     "nexus_analytics_last_updated": "2026-05-14T15:44:56.893429+00:00",
     "nexus_architecture_last_updated": "2026-05-14T15:27:54.912634+00:00",
     "nexus_last_updated": "2026-05-14T15:33:27.651945+00:00",
     "profile_claim_verified": false,
+    "project_structure_director": "README.md#project-structure-director",
+    "repo_description_doc": "docs/context/repo_description.md",
     "root": ".",
+    "suggested_topics": [
+      "agentic-memory",
+      "episodic-memory",
+      "governed-ai",
+      "ai-safety",
+      "benchmark-suite",
+      "repository-context",
+      "rcc",
+      "rcc-nexus",
+      "agent-navigation",
+      "evidence-packages"
+    ],
     "verification_mode": "manual"
   },
   "repository_context_integrity": {
@@ -220,6 +236,9 @@
     ],
     "regression_guard": [
       "python scripts/run_aerma_regression_guard.py"
+    ],
+    "remote_raw_integrity": [
+      "python scripts/rcc/verify_remote_raw_integrity.py"
     ],
     "software_architecture": [
       "pytest -q",
