@@ -1,7 +1,14 @@
 {
   "claim_boundary": "RCC Nexus is context/navigation integrity only, not code correctness proof.",
   "computed_nci": 0.96,
-  "findings": [],
+  "findings": [
+    {
+      "code": "RCCN001",
+      "message": "Missing README trisection layer: part ii - rcc nexus readme",
+      "path": "README.md",
+      "severity": "error"
+    }
+  ],
   "non_claim_locks": {
     "context_reconstruction_is_not_correctness_proof": true,
     "geometry_is_not_ai_internal_proof": true,
@@ -10,6 +17,6 @@
     "validation_remains_required": true
   },
   "schema": "RCC-N-v1.0-check-result",
-  "status": "pass",
-  "timestamp": "2026-05-14T15:52:43.707008+00:00"
+  "status": "fail",
+  "timestamp": "2026-05-14T15:56:36.181795+00:00"
 }

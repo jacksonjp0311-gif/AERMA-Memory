@@ -99,15 +99,15 @@ Run tests:
 
 Run the controlled suite:
 
-    python -m aerma.cli.main run-suite --suite ".\tasks\suite_v1_2.json"
+    python -m aaerma.cli.main run-suite --suite ".\tasks\suite_v1_2.json"
 
 Run the console script:
 
-    aerma run-suite --suite ".\tasks\suite_v1_2.json"
+    aaerma run-suite --suite ".\tasks\suite_v1_2.json"
 
 View the current regression guard:
 
-    python scripts/run_aerma_regression_guard.py
+    python scripts/run_aaerma_regression_guard.py
 
 Run the RCC drift check:
 
@@ -188,12 +188,12 @@ Regression-guard boundary: the guard locks local scaffold evidence only. It does
 
 | Folder | Meaning |
 |---|---|
-| `src/aerma/core` | AgentEpisode, AgentMemoryStore, MetricManifest, RetrievalEngine. |
-| `src/aerma/drift` | Dimensionless retrieval drift and Omega diagnostic weight. |
-| `src/aerma/gate` | ActionGate and SourceFallback. |
-| `src/aerma/benchmarks` | BenchmarkRunner, SuiteRunner, baselines, scoring, classifier. |
-| `src/aerma/evidence` | RuntimeLedger and EvidencePackageCompiler. |
-| `src/aerma/agent` | RecursiveExecutorStub and ReflectionEvaluatorStub. |
+| `src/aaerma/core` | AgentEpisode, AgentMemoryStore, MetricManifest, RetrievalEngine. |
+| `src/aaerma/drift` | Dimensionless retrieval drift and Omega diagnostic weight. |
+| `src/aaerma/gate` | ActionGate and SourceFallback. |
+| `src/aaerma/benchmarks` | BenchmarkRunner, SuiteRunner, baselines, scoring, classifier. |
+| `src/aaerma/evidence` | RuntimeLedger and EvidencePackageCompiler. |
+| `src/aaerma/agent` | RecursiveExecutorStub and ReflectionEvaluatorStub. |
 | `tasks` | Controlled benchmark tasks. |
 | `docs/context` | RCC context layer and Nexus index. |
 | `rcc/nexus` | RCC-N route maps, protocol, handoff, and Echo Location template. |
@@ -213,15 +213,15 @@ Suite evidence packages are written under:
 
 Suite ledgers are written under:
 
-    ledgers/aerma_suite_ledger.jsonl
+    ledgers/aaerma_suite_ledger.jsonl
 
 Attribution records are written under:
 
-    logs/phase2/attribution/latest_aerma_attribution.json
+    logs/phase2/attribution/latest_aaerma_attribution.json
 
 Regression guard records are written under:
 
-    logs/phase2/regression_guard/latest_aerma_regression_guard.json
+    logs/phase2/regression_guard/latest_aaerma_regression_guard.json
 
 RCC-N reports are written under:
 
@@ -247,7 +247,9 @@ AERMA-Memory is:
 
 ---
 
-# PART II - RCC Nexus README
+# PART II
+
+- RCC Nexus README
 
 ## RCC Nexus Identity
 
@@ -370,8 +372,8 @@ Evidence Surface:
 Validation Surface:
 
 - pytest -q
-- python -m aerma.cli.main run-suite --suite .\tasks\suite_v1_2.json
-- python scripts/run_aerma_regression_guard.py
+- python -m aaerma.cli.main run-suite --suite .\tasks\suite_v1_2.json
+- python scripts/run_aaerma_regression_guard.py
 - powershell -ExecutionPolicy Bypass -File .\scripts\rcc\check_rcc_drift.ps1
 - python scripts/rcc/check_rcc_nexus.py
 - python scripts/rcc/benchmark_rcc_nexus.py
@@ -433,7 +435,7 @@ Current repository context:
 - Purpose: governed agentic episodic memory reference implementation and benchmark workbench.
 - Current runtime layer: AERMA-Memory hardened local scaffold.
 - Conceptual architecture: AERMA v1.2 reference implementation and multi-task evidence layer.
-- Primary package: `aerma`.
+- Primary package: `aaerma`.
 - Current classification: AERMA-B on the local controlled suite only.
 - Current tests: `15 passed`.
 - Current controlled suite score: `1.0`.
@@ -452,7 +454,8 @@ Any AI agent reading or modifying this repository must follow this order:
 
 1. Read the Human Director Box.
 2. Read PART I - Human README.
-3. Read PART II - RCC Nexus README.
+3. Read PART II
+- RCC Nexus README.
 4. Read PART III - AI Agent README.
 5. Read `docs/context/repository_context_index.json`.
 6. Read `docs/context/rcc_nexus_index.json`.
@@ -466,13 +469,13 @@ Any AI agent reading or modifying this repository must follow this order:
 
 ## AI File Routing Guide
 
-- `src/aerma/core`: source-bound episode schema, memory store, metric manifest, and deterministic retrieval.
-- `src/aerma/drift`: retrieval drift and Omega diagnostic calculation.
-- `src/aerma/gate`: ActionGate and SourceFallback behavior.
-- `src/aerma/benchmarks`: BenchmarkRunner, SuiteRunner, baselines, task-aware scoring, classifier, attribution output, and regression guard generation.
-- `src/aerma/evidence`: runtime ledgers and evidence package compiler.
-- `src/aerma/agent`: RecursiveExecutorStub and ReflectionEvaluatorStub.
-- `src/aerma/cli`: command-line entry points.
+- `src/aaerma/core`: source-bound episode schema, memory store, metric manifest, and deterministic retrieval.
+- `src/aaerma/drift`: retrieval drift and Omega diagnostic calculation.
+- `src/aaerma/gate`: ActionGate and SourceFallback behavior.
+- `src/aaerma/benchmarks`: BenchmarkRunner, SuiteRunner, baselines, task-aware scoring, classifier, attribution output, and regression guard generation.
+- `src/aaerma/evidence`: runtime ledgers and evidence package compiler.
+- `src/aaerma/agent`: RecursiveExecutorStub and ReflectionEvaluatorStub.
+- `src/aaerma/cli`: command-line entry points.
 - `tasks`: controlled benchmark task definitions and suite manifest.
 - `configs`: runtime, metric, baseline, and suite configuration.
 - `logs`: phase logs, attribution records, regression guard outputs, future accepted/rejected deltas.
@@ -519,8 +522,8 @@ Never claim or imply:
 After README, RCC, or RCC-N changes, run:
 
     pytest -q
-    python -m aerma.cli.main run-suite --suite .\tasks\suite_v1_2.json
-    python scripts/run_aerma_regression_guard.py
+    python -m aaerma.cli.main run-suite --suite .\tasks\suite_v1_2.json
+    python scripts/run_aaerma_regression_guard.py
     powershell -ExecutionPolicy Bypass -File .\scripts\rcc\check_rcc_drift.ps1
     python scripts/rcc/check_rcc_nexus.py
     python scripts/rcc/benchmark_rcc_nexus.py

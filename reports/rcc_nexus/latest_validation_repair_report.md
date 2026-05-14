@@ -1,4 +1,4 @@
-﻿# Validation Repair Report
+# Validation Repair Report
 
 Timestamp: 2026-05-14T15:52:43.9774539Z
 
@@ -8,7 +8,7 @@ Status: pass
 
 ## Repair
 
-Activated .venv, installed the package editable, verified erma import, and reran full validation.
+Activated .venv, installed the package editable, verified aaerma import, and reran full validation.
 
 ## Validation
 

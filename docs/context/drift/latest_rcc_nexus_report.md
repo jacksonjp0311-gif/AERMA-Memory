@@ -1,14 +1,16 @@
 # RCC Nexus Report
 
-Status: pass
+Status: fail
 
 Computed NCI: 0.96
 
-Timestamp: 2026-05-14T15:52:43.707008+00:00
+Timestamp: 2026-05-14T15:56:36.181795+00:00
 
 ## Findings
 
-No findings.
+| Code | Severity | Path | Message |
+|---|---|---|---|
+| RCCN001 | error | README.md | Missing README trisection layer: part ii - rcc nexus readme |
 
 ## Boundary
 
