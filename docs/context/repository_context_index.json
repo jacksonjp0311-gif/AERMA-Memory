@@ -122,17 +122,27 @@
     "implementation_status": "planned_next_pass"
   },
   "rcc_nexus": {
+    "benchmark_report_json": "reports/rcc_nexus/latest_rcc_nexus_benchmark.json",
+    "benchmark_report_md": "reports/rcc_nexus/latest_rcc_nexus_benchmark.md",
     "checker": "scripts/rcc/check_rcc_nexus.py",
     "claim_boundary": "RCC-N improves navigation and context integrity; it does not prove correctness.",
     "enabled": true,
-    "implementation_status": "local_self_mode_active_repaired",
+    "implementation_status": "local_self_mode_active_with_human_director_and_analytics",
     "index": "docs/context/rcc_nexus_index.json",
     "last_repaired": "2026-05-14T15:34:34.899075+00:00",
     "latest_report_json": "docs/context/drift/latest_rcc_nexus_report.json",
     "latest_report_md": "docs/context/drift/latest_rcc_nexus_report.md",
+    "metrics_history": "reports/rcc_nexus/rcc_nexus_metrics_history.jsonl",
     "nci_mode": "self",
     "nexus_root": "rcc/nexus/",
-    "route_map": "rcc/nexus/route_map.json"
+    "route_map": "rcc/nexus/route_map.json",
+    "scorecard": "reports/rcc_nexus/rcc_nexus_scorecard.md",
+    "visuals": [
+      "visuals/rcc_nexus/nci_components.svg",
+      "visuals/rcc_nexus/rcc_nexus_coverage_chart.svg",
+      "visuals/rcc_nexus/rcc_nexus_health_trend.svg",
+      "visuals/rcc_nexus/rcc_nexus_surface_map.svg"
+    ]
   },
   "rci_weight_policy": {
     "declared": true,
@@ -151,11 +161,12 @@
     "architecture_last_updated": "2026-05-14T11:19:54.857069+00:00",
     "current_architecture_layer": "AERMA-RCC-ECHO-v0.1.2-architecture-lock",
     "current_nexus_architecture_layer": "RCC-N-v1.0-architecture-lock",
-    "current_nexus_layer": "RCC-N-v1.0-local-integration",
+    "current_nexus_layer": "RCC-N-v1.0-human-director-analytics",
     "current_runtime_layer": "AERMA-Memory-v0.1.1-hardening",
     "declared_profile": "RCC-Core",
     "last_verified": "2026-05-13",
     "name": "AERMA-Memory",
+    "nexus_analytics_last_updated": "2026-05-14T15:44:56.893429+00:00",
     "nexus_architecture_last_updated": "2026-05-14T15:27:54.912634+00:00",
     "nexus_last_updated": "2026-05-14T15:33:27.651945+00:00",
     "profile_claim_verified": false,
@@ -196,6 +207,10 @@
     ],
     "rcc_nexus": [
       "python scripts/rcc/check_rcc_nexus.py"
+    ],
+    "rcc_nexus_analytics": [
+      "python scripts/rcc/benchmark_rcc_nexus.py",
+      "python scripts/rcc/generate_rcc_nexus_charts.py"
     ],
     "rcc_nexus_architecture": [
       "pytest -q",

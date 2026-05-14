@@ -121,3 +121,14 @@ Boundary: These documents lock implementation direction. They do not prove code 
 | RCC Nexus reports | `docs/context/drift/latest_rcc_nexus_report.*` | Generated Nexus integrity reports | Medium |
 
 Boundary: RCC-N is navigation/context integrity only, not code correctness.
+
+## RCC-N Reports and Visuals
+
+| Module | Path | Role | Runtime claim sensitivity |
+|---|---|---|---|
+| RCC-N reports | `reports/rcc_nexus/` | Human-readable benchmark reports, scorecards, and metrics history | Medium |
+| RCC-N visuals | `visuals/rcc_nexus/` | SVG charts for NCI components, coverage, trend, and surface map | Medium |
+| RCC-N benchmark script | `scripts/rcc/benchmark_rcc_nexus.py` | Gathers RCC-N data and writes reports | Medium |
+| RCC-N chart script | `scripts/rcc/generate_rcc_nexus_charts.py` | Generates SVG visual diagnostics | Medium |
+
+Boundary: reports and visuals are diagnostic only. They do not prove code correctness.

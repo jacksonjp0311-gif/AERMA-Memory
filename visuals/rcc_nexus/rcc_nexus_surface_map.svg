@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+<rect width="100%" height="100%" fill="white"/>
+<text x="30" y="35" font-size="24" font-family="Arial" font-weight="bold">RCC-N Surface Map</text>
+<text x="30" y="80" font-size="14" font-family="Arial">nodes</text>
+<rect x="220" y="60" width="600" height="28" fill="#4f6bed"/>
+<text x="830" y="80" font-size="14" font-family="Arial">1.000</text>
+<text x="30" y="126" font-size="14" font-family="Arial">routes</text>
+<rect x="220" y="106" width="450" height="28" fill="#4f6bed"/>
+<text x="680" y="126" font-size="14" font-family="Arial">0.750</text>
+<text x="30" y="172" font-size="14" font-family="Arial">echo records</text>
+<rect x="220" y="152" width="525" height="28" fill="#4f6bed"/>
+<text x="755" y="172" font-size="14" font-family="Arial">0.875</text>
+<text x="30" y="218" font-size="14" font-family="Arial">locks</text>
+<rect x="220" y="198" width="375" height="28" fill="#4f6bed"/>
+<text x="605" y="218" font-size="14" font-family="Arial">0.625</text>
+<text x="30" y="390" font-size="12" font-family="Arial" fill="#555">Boundary: RCC-N charts are diagnostics, not code correctness proof.</text>
+</svg>

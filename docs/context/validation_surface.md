@@ -114,3 +114,22 @@ Full validation after RCC-N changes:
     python scripts/rcc/check_rcc_nexus.py
 
 Boundary: RCC-N local validation does not prove code correctness.
+
+## RCC-N Analytics Validation
+
+Run RCC-N analytics:
+
+    python scripts/rcc/benchmark_rcc_nexus.py
+    python scripts/rcc/generate_rcc_nexus_charts.py
+
+Full validation after README, RCC-N report, or chart changes:
+
+    pytest -q
+    python -m aerma.cli.main run-suite --suite .\tasks\suite_v1_2.json
+    python scripts/run_aerma_regression_guard.py
+    powershell -ExecutionPolicy Bypass -File .\scripts\rcc\check_rcc_drift.ps1
+    python scripts/rcc/check_rcc_nexus.py
+    python scripts/rcc/benchmark_rcc_nexus.py
+    python scripts/rcc/generate_rcc_nexus_charts.py
+
+Boundary: RCC-N analytics do not prove code correctness.

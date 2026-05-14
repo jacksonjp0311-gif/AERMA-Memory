@@ -1,0 +1,59 @@
+{
+  "claim_boundary": "RCC-N benchmark reports are navigation/context diagnostics, not correctness proof.",
+  "latest_nexus_checker_nci": 0.96,
+  "latest_nexus_checker_status": "pass",
+  "metrics": {
+    "coordinate_coverage": 1.0,
+    "coordinate_present": 8,
+    "coordinate_total": 8,
+    "echo_location_coverage": 1.0,
+    "echo_location_present": 7,
+    "echo_location_required": 7,
+    "node_count": 8,
+    "non_claim_lock_coverage": 1.0,
+    "non_claim_locks_present": 5,
+    "non_claim_locks_total": 5,
+    "rcc_nexus_finding_count": 0,
+    "readme_format_health": 1.0,
+    "route_count": 6,
+    "route_coverage": 1.0,
+    "route_required_count": 6
+  },
+  "nci": 0.96,
+  "nci_components": {
+    "completeness": {
+      "algorithm": "required_nexus_sections_present / required_nexus_sections",
+      "score": 1.0
+    },
+    "coordinate_completeness": {
+      "algorithm": "nodes_with_shell_meridian_sector_ttl / total_nodes",
+      "score": 1.0
+    },
+    "drift_freshness": {
+      "algorithm": "1 - geometric_drift_score",
+      "score": 0.95
+    },
+    "evidence_validation_linkage": {
+      "algorithm": "records_with_required_evidence_and_validation / required_records",
+      "score": 0.9
+    },
+    "invariant_compliance": {
+      "algorithm": "records_preserving_non_claim_locks / total_records",
+      "score": 1.0
+    },
+    "link_correctness": {
+      "algorithm": "declared_hooks_resolve_or_are_explicitly_external / declared_hooks",
+      "score": 0.9
+    },
+    "pattern_rigidity": {
+      "algorithm": "template_conforming_records / total_records",
+      "score": 0.95
+    }
+  },
+  "nci_mode": "self",
+  "readme_format_failures": [],
+  "readme_missing_items": [],
+  "schema": "AERMA-RCC-N-benchmark-v1",
+  "status": "pass",
+  "timestamp": "2026-05-14T15:44:59.732452+00:00"
+}

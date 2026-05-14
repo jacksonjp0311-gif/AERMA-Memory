@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+<rect width="100%" height="100%" fill="white"/>
+<text x="30" y="35" font-size="24" font-family="Arial" font-weight="bold">RCC-N NCI Components</text>
+<text x="30" y="80" font-size="14" font-family="Arial">completeness</text>
+<rect x="220" y="60" width="600" height="28" fill="#4f6bed"/>
+<text x="830" y="80" font-size="14" font-family="Arial">1.000</text>
+<text x="30" y="126" font-size="14" font-family="Arial">coordinate_completeness</text>
+<rect x="220" y="106" width="600" height="28" fill="#4f6bed"/>
+<text x="830" y="126" font-size="14" font-family="Arial">1.000</text>
+<text x="30" y="172" font-size="14" font-family="Arial">drift_freshness</text>
+<rect x="220" y="152" width="570" height="28" fill="#4f6bed"/>
+<text x="800" y="172" font-size="14" font-family="Arial">0.950</text>
+<text x="30" y="218" font-size="14" font-family="Arial">evidence_validation_linkage</text>
+<rect x="220" y="198" width="540" height="28" fill="#4f6bed"/>
+<text x="770" y="218" font-size="14" font-family="Arial">0.900</text>
+<text x="30" y="264" font-size="14" font-family="Arial">invariant_compliance</text>
+<rect x="220" y="244" width="600" height="28" fill="#4f6bed"/>
+<text x="830" y="264" font-size="14" font-family="Arial">1.000</text>
+<text x="30" y="310" font-size="14" font-family="Arial">link_correctness</text>
+<rect x="220" y="290" width="540" height="28" fill="#4f6bed"/>
+<text x="770" y="310" font-size="14" font-family="Arial">0.900</text>
+<text x="30" y="356" font-size="14" font-family="Arial">pattern_rigidity</text>
+<rect x="220" y="336" width="570" height="28" fill="#4f6bed"/>
+<text x="800" y="356" font-size="14" font-family="Arial">0.950</text>
+<text x="30" y="390" font-size="12" font-family="Arial" fill="#555">Boundary: RCC-N charts are diagnostics, not code correctness proof.</text>
+</svg>
